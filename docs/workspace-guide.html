@@ -235,8 +235,10 @@ npx skills add &lt;owner/repo&gt; --skill &lt;name&gt; -g  # install one, global
 
 <h2 id="s8">8. Limits and open points</h2>
 <ul>
-<li>The kit was tested on this PC (dry run) and in a throwaway user folder (real run). See the report for the numbers. A first run on a truly clean machine is still the final proof.</li>
-<li>gstack's setup needs Git Bash and Bun. Both come with bootstrap. gstack is cloned at today's upstream version, which may be newer than your copy from 25 Jun 2026.</li>
+<li><b>Test, 3 Nov 2026:</b> a real restore into an empty user folder on this PC (without the npm/pip/winget steps). It added 14 of 14 marketplaces, installed 121 of 123 plugins, put 246 skills in place including gstack's commands, and added the MCP servers. 21st was correctly skipped until its key is set. A first run on a truly clean machine is still the final proof.</li>
+<li>Two plugins are gone upstream and can't be reinstalled anywhere: <code>wealth-management</code> (claude-for-financial-services) and <code>claude-coach</code> (claude-code-skills).</li>
+<li>Windows paths longer than 260 characters break git clones. Keep your Windows user folder short, which is the default. Git's <code>core.longpaths</code> setting also fixes it.</li>
+<li>gstack's setup needs Git Bash and Bun 1.4.2 or newer (older Bun crashes). Restore runs <code>bun upgrade</code> first. gstack is cloned at today's upstream version, which is newer than your copy from 25 Jun 2026.</li>
 <li>Plugin versions come from each marketplace's current state, not the versions you have now. Vendored skills are exact copies.</li>
 <li>Sources marked <span class="l">likely</span> (OmniRoute, Ruflo, Claude SEO extras, taste skills) were matched by name and inner links, not by an install record.</li>
 <li>The 127.0.0.1:4000 hooks were left out because the app behind them was not identified.</li>

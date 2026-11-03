@@ -180,7 +180,7 @@ function restore() {
   log(`${M.vendored.length} copied skills in place`);
   for (const [n, url] of Object.entries(M.gitSkills)) if (!fs.existsSync(path.join(skillsDir, n))) tryRun(`git clone --depth 1 ${url} "${path.join(skillsDir, n)}"`);
   if (fs.existsSync(path.join(skillsDir, 'gstack'))) { // needs Git Bash + Bun >= 1.4.2 (older Bun crashes in setup); makes /browse, /qa, /ship ...
-    tryRun('bun upgrade');
+    tryRun('bun upgrade'); // gstack pins a newer Bun than winget may have
     tryRun('bash ./setup', { cwd: path.join(skillsDir, 'gstack') });
   }
   for (const [n, target] of Object.entries(M.links)) {
@@ -233,8 +233,8 @@ function restore() {
     if (name === 'laya' && !fs.existsSync(path.join(H, '.laya', 'venv'))) tryRun(`python -m venv "${path.join(H, '.laya', 'venv')}" && "${path.join(H, '.laya', 'venv', 'Scripts', 'python.exe')}" -m pip install ${M.layaVenv.join(' ')}`);
     const cfg = { type: v.type || 'stdio', command: v.command, args: v.args, url: v.url };
     for (const k of ['env', 'headers']) if (Object.keys(v[k] || {}).length) cfg[k] = Object.fromEntries(fill(v[k]));
-    Object.keys(cfg).forEach((k) => cfg[k] === undefined && delete cfg[k]);
-    tryRun(`claude mcp add-json -s user ${name} '${JSON.stringify(cfg)}'`, { shell: 'bash' });
+    Object.keys(cfg).forEach((k) => cfg[k] == null && delete cfg[k]); // null url/args are rejected by `claude mcp add-json`
+    tryRun(`claude mcp add-json -s user ${name} '${JSON.stringify(cfg).replace(/\\\\/g, '/')}'`, { shell: 'bash' }); // backslash paths are rejected as "Invalid input"
   }
   console.log('Restore done. Open a new Claude Code session; sign in to figma/21st/etc. with /mcp where asked.');
 }
