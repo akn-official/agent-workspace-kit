@@ -249,7 +249,7 @@ function buildGuide(cat, outFile) {
 // ------------------------------------------------------------------ kit (public copy for friends)
 // node workspace.js kit <outDir>: builds a shareable repo from workspace/. Leaves out memory, research, personal/client
 // skills, OpenCode agents and any skill without a known MIT/Apache source. Adds each upstream LICENSE under THIRD_PARTY/.
-const PERSONAL = new Set(['ashraf-way', 'linkedin-refiner', 'meenakshi-maintain', 'pixel-maintain', 'daily-jarvis-prompt', 'reel-studio', 'ui-component-registry']);
+const PERSONAL = new Set([]); // add your own personal/client skill names here
 function kit(out) {
   if (!out) return console.log('usage: node workspace.js kit <outDir>');
   const M = readJson(path.join(WS, 'manifest.json'), null);
@@ -289,7 +289,7 @@ function kit(out) {
     if (!fs.existsSync(s)) continue;
     if (fs.statSync(s).isDirectory()) copyTree(s, d); else { fs.mkdirSync(path.dirname(d), { recursive: true }); fs.copyFileSync(s, d); }
   }
-  fs.copyFileSync(__filename, path.join(out, 'workspace.js'));
+  fs.writeFileSync(path.join(out, 'workspace.js'), fs.readFileSync(__filename, 'utf8').replace(/const PERSONAL = new Set\(\[[^\]]*\]\);/, "const PERSONAL = new Set([]); // add your own personal/client skill names here"));
   const slug = process.argv[4] || 'akn-official/agent-workspace-kit';
   fs.writeFileSync(path.join(out, 'bootstrap.ps1'), fs.readFileSync(path.join(REPO, 'bootstrap.ps1'), 'utf8').replace(/\$RepoSlug = '[^']*'/, `$RepoSlug = '${slug}'`));
   fs.mkdirSync(path.join(out, 'docs'), { recursive: true });
