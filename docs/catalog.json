@@ -1,0 +1,2828 @@
+{
+  "skills": [
+    {
+      "name": "agentdb-advanced",
+      "desc": "Master advanced AgentDB features including QUIC synchronization, multi-database management, custom distance metrics, hybrid search, and distributed systems integration. Use when building distributed AI systems, multi-agent coordination, or …",
+      "family": "Ruflo / claude-flow",
+      "source": "ruvnet/ruflo",
+      "install": "npm i -g ruflo; ruflo init",
+      "conf": "likely"
+    },
+    {
+      "name": "agentdb-learning",
+      "desc": "Create and train AI learning plugins with AgentDB's 9 reinforcement learning algorithms. Includes Decision Transformer, Q-Learning, SARSA, Actor-Critic, and more. Use when building self-learning agents, implementing RL, or optimizing agent …",
+      "family": "Ruflo / claude-flow",
+      "source": "ruvnet/ruflo",
+      "install": "npm i -g ruflo; ruflo init",
+      "conf": "likely"
+    },
+    {
+      "name": "agentdb-memory-patterns",
+      "desc": "Implement persistent memory patterns for AI agents using AgentDB. Includes session memory, long-term storage, pattern learning, and context management. Use when building stateful agents, chat systems, or intelligent assistants.",
+      "family": "Ruflo / claude-flow",
+      "source": "ruvnet/ruflo",
+      "install": "npm i -g ruflo; ruflo init",
+      "conf": "likely"
+    },
+    {
+      "name": "agentdb-optimization",
+      "desc": "Optimize AgentDB performance with quantization (4-32x memory reduction), HNSW indexing (150x faster search), caching, and batch operations. Use when optimizing memory usage, improving search speed, or scaling to millions of vectors.",
+      "family": "Ruflo / claude-flow",
+      "source": "ruvnet/ruflo",
+      "install": "npm i -g ruflo; ruflo init",
+      "conf": "likely"
+    },
+    {
+      "name": "agentdb-vector-search",
+      "desc": "Implement semantic vector search with AgentDB for intelligent document retrieval, similarity matching, and context-aware querying. Use when building RAG systems, semantic search engines, or intelligent knowledge bases.",
+      "family": "Ruflo / claude-flow",
+      "source": "ruvnet/ruflo",
+      "install": "npm i -g ruflo; ruflo init",
+      "conf": "likely"
+    },
+    {
+      "name": "ai-second-brain",
+      "desc": "Walks the user through Charlie Hills's AI Second Brain + Karpathy Wiki setup from the MarTech AI newsletter. Use whenever the user mentions building an AI second brain, the Karpathy wiki, organising their ChatGPT/Claude exports in Obsidian,…",
+      "family": "Git clone",
+      "source": "charlie947/ai-second-brain",
+      "install": "git clone --depth 1 https://github.com/charlie947/ai-second-brain.git ~/.claude/skills/ai-second-brain",
+      "conf": "verified"
+    },
+    {
+      "name": "autoplan",
+      "desc": "Auto-review pipeline — reads the full CEO, design, eng, and DX review skills from disk and runs them sequentially with auto-decisions using 6 decision principles. (gstack)",
+      "family": "gstack",
+      "source": "garrytan/gstack",
+      "install": "git clone --depth 1 https://github.com/garrytan/gstack ~/.claude/skills/gstack; cd ~/.claude/skills/gstack; ./setup",
+      "conf": "verified"
+    },
+    {
+      "name": "benchmark",
+      "desc": "Performance regression detection using the browse daemon. (gstack)",
+      "family": "gstack",
+      "source": "garrytan/gstack",
+      "install": "git clone --depth 1 https://github.com/garrytan/gstack ~/.claude/skills/gstack; cd ~/.claude/skills/gstack; ./setup",
+      "conf": "verified"
+    },
+    {
+      "name": "benchmark-models",
+      "desc": "Cross-model benchmark for gstack skills. (gstack)",
+      "family": "gstack",
+      "source": "garrytan/gstack",
+      "install": "git clone --depth 1 https://github.com/garrytan/gstack ~/.claude/skills/gstack; cd ~/.claude/skills/gstack; ./setup",
+      "conf": "verified"
+    },
+    {
+      "name": "browse",
+      "desc": "Fast headless browser for QA testing and site dogfooding. (gstack)",
+      "family": "gstack",
+      "source": "garrytan/gstack",
+      "install": "git clone --depth 1 https://github.com/garrytan/gstack ~/.claude/skills/gstack; cd ~/.claude/skills/gstack; ./setup",
+      "conf": "verified"
+    },
+    {
+      "name": "browser",
+      "desc": "Web browser automation with AI-optimized snapshots for claude-flow agents",
+      "family": "Ruflo / claude-flow",
+      "source": "ruvnet/ruflo",
+      "install": "npm i -g ruflo; ruflo init",
+      "conf": "likely"
+    },
+    {
+      "name": "canary",
+      "desc": "Post-deploy canary monitoring. (gstack)",
+      "family": "gstack",
+      "source": "garrytan/gstack",
+      "install": "git clone --depth 1 https://github.com/garrytan/gstack ~/.claude/skills/gstack; cd ~/.claude/skills/gstack; ./setup",
+      "conf": "verified"
+    },
+    {
+      "name": "careful",
+      "desc": "Safety guardrails for destructive commands. (gstack)",
+      "family": "gstack",
+      "source": "garrytan/gstack",
+      "install": "git clone --depth 1 https://github.com/garrytan/gstack ~/.claude/skills/gstack; cd ~/.claude/skills/gstack; ./setup",
+      "conf": "verified"
+    },
+    {
+      "name": "cavecrew",
+      "desc": "Decision guide for delegating to caveman-style subagents. Tells the main thread WHEN to spawn `cavecrew-investigator` (locate code), `cavecrew-builder` (1-2 file edit), or `cavecrew-reviewer` (diff review) instead of doing the work inline o…",
+      "family": "caveman",
+      "source": "JuliusBrussee/caveman",
+      "install": "claude plugin marketplace add JuliusBrussee/caveman; claude plugin install caveman@caveman",
+      "conf": "verified"
+    },
+    {
+      "name": "caveman",
+      "desc": "Ultra-compressed communication mode. Cuts token usage ~75% by speaking like caveman while keeping full technical accuracy. Supports intensity levels: lite, full (default), ultra, wenyan-lite, wenyan-full, wenyan-ultra. Use when user says \"c…",
+      "family": "caveman",
+      "source": "JuliusBrussee/caveman",
+      "install": "claude plugin marketplace add JuliusBrussee/caveman; claude plugin install caveman@caveman",
+      "conf": "verified"
+    },
+    {
+      "name": "caveman-commit",
+      "desc": "Ultra-compressed commit message generator. Cuts noise from commit messages while preserving intent and reasoning. Conventional Commits format. Subject ≤50 chars, body only when \"why\" isn't obvious. Use when user says \"write a commit\", \"comm…",
+      "family": "caveman",
+      "source": "JuliusBrussee/caveman",
+      "install": "claude plugin marketplace add JuliusBrussee/caveman; claude plugin install caveman@caveman",
+      "conf": "verified"
+    },
+    {
+      "name": "caveman-compress",
+      "desc": "Compress natural language memory files (CLAUDE.md, todos, preferences) into caveman format to save input tokens. Preserves all technical substance, code, URLs, and structure. Compressed version overwrites the original file. Human-readable b…",
+      "family": "caveman",
+      "source": "JuliusBrussee/caveman",
+      "install": "claude plugin marketplace add JuliusBrussee/caveman; claude plugin install caveman@caveman",
+      "conf": "verified"
+    },
+    {
+      "name": "caveman-help",
+      "desc": "Quick-reference card for all caveman modes, skills, and commands. One-shot display, not a persistent mode. Trigger: /caveman-help, \"caveman help\", \"what caveman commands\", \"how do I use caveman\".",
+      "family": "caveman",
+      "source": "JuliusBrussee/caveman",
+      "install": "claude plugin marketplace add JuliusBrussee/caveman; claude plugin install caveman@caveman",
+      "conf": "verified"
+    },
+    {
+      "name": "caveman-review",
+      "desc": "Ultra-compressed code review comments. Cuts noise from PR feedback while preserving the actionable signal. Each comment is one line: location, problem, fix. Use when user says \"review this PR\", \"code review\", \"review the diff\", \"/review\", o…",
+      "family": "caveman",
+      "source": "JuliusBrussee/caveman",
+      "install": "claude plugin marketplace add JuliusBrussee/caveman; claude plugin install caveman@caveman",
+      "conf": "verified"
+    },
+    {
+      "name": "caveman-stats",
+      "desc": "Show real token usage and estimated savings for the current session. Reads directly from the Claude Code session log — no AI estimation. Triggers on /caveman-stats. Output is injected by the mode-tracker hook; the model itself does not comp…",
+      "family": "caveman",
+      "source": "JuliusBrussee/caveman",
+      "install": "claude plugin marketplace add JuliusBrussee/caveman; claude plugin install caveman@caveman",
+      "conf": "verified"
+    },
+    {
+      "name": "ckm-banner-design",
+      "desc": "Design banners for social media, ads, website heroes, creative assets, and print. Multiple art direction options with AI-generated visuals. Actions: design, create, generate banner. Platforms: Facebook, Twitter/X, LinkedIn, YouTube, Instagr…",
+      "family": "UI UX Pro Max",
+      "source": "nextlevelbuilder/ui-ux-pro-max-skill",
+      "install": "npx skills add nextlevelbuilder/ui-ux-pro-max-skill -g",
+      "conf": "verified"
+    },
+    {
+      "name": "ckm-brand",
+      "desc": "Brand voice, visual identity, messaging frameworks, asset management, brand consistency. Activate for branded content, tone of voice, marketing assets, brand compliance, style guides.",
+      "family": "UI UX Pro Max",
+      "source": "nextlevelbuilder/ui-ux-pro-max-skill",
+      "install": "npx skills add nextlevelbuilder/ui-ux-pro-max-skill -g",
+      "conf": "verified"
+    },
+    {
+      "name": "ckm-design",
+      "desc": "Comprehensive design skill: brand identity, design tokens, UI styling, logo generation (55 styles, Gemini AI), corporate identity program (50 deliverables, CIP mockups), HTML presentations (Chart.js), banner design (22 styles, social/ads/we…",
+      "family": "UI UX Pro Max",
+      "source": "nextlevelbuilder/ui-ux-pro-max-skill",
+      "install": "npx skills add nextlevelbuilder/ui-ux-pro-max-skill -g",
+      "conf": "verified"
+    },
+    {
+      "name": "ckm-design-system",
+      "desc": "Token architecture, component specifications, and slide generation. Three-layer tokens (primitive→semantic→component), CSS variables, spacing/typography scales, component specs, strategic slide creation. Use for design tokens, systematic de…",
+      "family": "UI UX Pro Max",
+      "source": "nextlevelbuilder/ui-ux-pro-max-skill",
+      "install": "npx skills add nextlevelbuilder/ui-ux-pro-max-skill -g",
+      "conf": "verified"
+    },
+    {
+      "name": "ckm-slides",
+      "desc": "Create strategic HTML presentations with Chart.js, design tokens, responsive layouts, copywriting formulas, and contextual slide strategies.",
+      "family": "UI UX Pro Max",
+      "source": "nextlevelbuilder/ui-ux-pro-max-skill",
+      "install": "npx skills add nextlevelbuilder/ui-ux-pro-max-skill -g",
+      "conf": "verified"
+    },
+    {
+      "name": "ckm-ui-styling",
+      "desc": "Create beautiful, accessible user interfaces with shadcn/ui components (built on Radix UI + Tailwind), Tailwind CSS utility-first styling, and canvas-based visual designs. Use when building user interfaces, implementing design systems, crea…",
+      "family": "UI UX Pro Max",
+      "source": "nextlevelbuilder/ui-ux-pro-max-skill",
+      "install": "npx skills add nextlevelbuilder/ui-ux-pro-max-skill -g",
+      "conf": "verified"
+    },
+    {
+      "name": "cli-a2a",
+      "desc": "Interact with the OmniRoute A2A server from the CLI. Send tasks, inspect skill execution history, and test the JSON-RPC 2.0 agent-to-agent protocol interactively.",
+      "family": "OmniRoute",
+      "source": "diegosouzapw/OmniRoute",
+      "install": "npm i -g omniroute",
+      "conf": "likely"
+    },
+    {
+      "name": "cli-backup-sync",
+      "desc": "Backup and restore OmniRoute data from the CLI. Trigger incremental snapshots, sync to cloud storage, manage backup schedules, and restore from archive files.",
+      "family": "OmniRoute",
+      "source": "diegosouzapw/OmniRoute",
+      "install": "npm i -g omniroute",
+      "conf": "likely"
+    },
+    {
+      "name": "cli-batches",
+      "desc": "Submit and monitor batch inference jobs from the CLI. Upload and manage files for batch processing, retrieve results, and integrate batch pipelines with CI/CD workflows.",
+      "family": "OmniRoute",
+      "source": "diegosouzapw/OmniRoute",
+      "install": "npm i -g omniroute",
+      "conf": "likely"
+    },
+    {
+      "name": "cli-chat",
+      "desc": "Send chat completions, stream responses, and start an interactive REPL session from the CLI. Supports all OmniRoute providers, combo routing, and system prompt configuration.",
+      "family": "OmniRoute",
+      "source": "diegosouzapw/OmniRoute",
+      "install": "npm i -g omniroute",
+      "conf": "likely"
+    },
+    {
+      "name": "cli-compression",
+      "desc": "Configure and test prompt compression from the CLI. Manage RTK filters, Caveman rules, stacked compression modes, and preview compression output with real prompts.",
+      "family": "OmniRoute",
+      "source": "diegosouzapw/OmniRoute",
+      "install": "npm i -g omniroute",
+      "conf": "likely"
+    },
+    {
+      "name": "cli-contexts",
+      "desc": "Manage context engineering configurations, RTK filter sets, and conversation sessions from the CLI. Apply context-relay settings and inspect active context pipelines.",
+      "family": "OmniRoute",
+      "source": "diegosouzapw/OmniRoute",
+      "install": "npm i -g omniroute",
+      "conf": "likely"
+    },
+    {
+      "name": "cli-cost-usage",
+      "desc": "View cost breakdowns, token usage, and call logs from the CLI. Filter by provider, model, or date range. Export usage reports and inspect per-connection spending.",
+      "family": "OmniRoute",
+      "source": "diegosouzapw/OmniRoute",
+      "install": "npm i -g omniroute",
+      "conf": "likely"
+    },
+    {
+      "name": "cli-eval",
+      "desc": "Create and run evaluation suites, watch live benchmark progress, view scorecards, compare model performance, and integrate eval runs with CI workflows from the CLI.",
+      "family": "OmniRoute",
+      "source": "diegosouzapw/OmniRoute",
+      "install": "npm i -g omniroute",
+      "conf": "likely"
+    },
+    {
+      "name": "cli-health",
+      "desc": "Check server health, component status, and live metrics from the CLI. Run `health`, `health components`, and `health watch` for a real-time dashboard of circuit breakers and provider status.",
+      "family": "OmniRoute",
+      "source": "diegosouzapw/OmniRoute",
+      "install": "npm i -g omniroute",
+      "conf": "likely"
+    },
+    {
+      "name": "cli-keys",
+      "desc": "Create, list, rotate, and revoke OmniRoute API keys from the CLI. Manage OAuth flows for provider authentication and inspect key scopes and expiration.",
+      "family": "OmniRoute",
+      "source": "diegosouzapw/OmniRoute",
+      "install": "npm i -g omniroute",
+      "conf": "likely"
+    },
+    {
+      "name": "cli-mcp",
+      "desc": "Inspect the MCP server status, list registered tools and scopes, run tool invocations, and manage MCP audit logs from the CLI.",
+      "family": "OmniRoute",
+      "source": "diegosouzapw/OmniRoute",
+      "install": "npm i -g omniroute",
+      "conf": "likely"
+    },
+    {
+      "name": "cli-models",
+      "desc": "Query available AI models, list model aliases, and browse the full model catalog from the CLI. Filter by provider, search by capability, and resolve model name variants.",
+      "family": "OmniRoute",
+      "source": "diegosouzapw/OmniRoute",
+      "install": "npm i -g omniroute",
+      "conf": "likely"
+    },
+    {
+      "name": "cli-plugins-skills",
+      "desc": "Manage Omni Skills (list, install, test, remove), plugins (create, configure), and persistent memory (search, add, clear) from the CLI.",
+      "family": "OmniRoute",
+      "source": "diegosouzapw/OmniRoute",
+      "install": "npm i -g omniroute",
+      "conf": "likely"
+    },
+    {
+      "name": "cli-policy-audit",
+      "desc": "Inspect audit logs, manage access policies, view telemetry data, and review request history from the CLI. Filter by event type, user, or time range for compliance workflows.",
+      "family": "OmniRoute",
+      "source": "diegosouzapw/OmniRoute",
+      "install": "npm i -g omniroute",
+      "conf": "likely"
+    },
+    {
+      "name": "cli-providers",
+      "desc": "Manage provider connections from the CLI: list available/configured providers, add, test, test-all, validate, rotate API keys, and view per-provider metrics.",
+      "family": "OmniRoute",
+      "source": "diegosouzapw/OmniRoute",
+      "install": "npm i -g omniroute",
+      "conf": "likely"
+    },
+    {
+      "name": "cli-resilience",
+      "desc": "Inspect and manage circuit-breaker states, connection cooldowns, quota limits, and backoff levels from the CLI. Reset stuck providers and configure resilience thresholds.",
+      "family": "OmniRoute",
+      "source": "diegosouzapw/OmniRoute",
+      "install": "npm i -g omniroute",
+      "conf": "likely"
+    },
+    {
+      "name": "cli-routing",
+      "desc": "Create, list, update, and delete routing combos from the CLI. Test routing strategies, inspect combo metrics, and configure fallback chains interactively.",
+      "family": "OmniRoute",
+      "source": "diegosouzapw/OmniRoute",
+      "install": "npm i -g omniroute",
+      "conf": "likely"
+    },
+    {
+      "name": "cli-serve",
+      "desc": "Start, stop, and restart the OmniRoute server from the CLI. Manage daemon mode, port configuration, auto-recovery, system tray integration, and the dashboard open shortcut.",
+      "family": "OmniRoute",
+      "source": "diegosouzapw/OmniRoute",
+      "install": "npm i -g omniroute",
+      "conf": "likely"
+    },
+    {
+      "name": "cli-setup",
+      "desc": "Run initial setup, configure global CLI settings, manage environment variables, check for updates, and configure autostart via the CLI setup and config commands.",
+      "family": "OmniRoute",
+      "source": "diegosouzapw/OmniRoute",
+      "install": "npm i -g omniroute",
+      "conf": "likely"
+    },
+    {
+      "name": "cli-tunnel",
+      "desc": "Start and stop tunnel connections (ngrok, Cloudflare, custom) from the CLI. Inspect active tunnel URLs, configure authentication, and test external reachability.",
+      "family": "OmniRoute",
+      "source": "diegosouzapw/OmniRoute",
+      "install": "npm i -g omniroute",
+      "conf": "likely"
+    },
+    {
+      "name": "codex",
+      "desc": "OpenAI Codex CLI wrapper — three modes. (gstack)",
+      "family": "gstack",
+      "source": "garrytan/gstack",
+      "install": "git clone --depth 1 https://github.com/garrytan/gstack ~/.claude/skills/gstack; cd ~/.claude/skills/gstack; ./setup",
+      "conf": "verified"
+    },
+    {
+      "name": "context-restore",
+      "desc": "Restore working context saved earlier by /context-save. (gstack)",
+      "family": "gstack",
+      "source": "garrytan/gstack",
+      "install": "git clone --depth 1 https://github.com/garrytan/gstack ~/.claude/skills/gstack; cd ~/.claude/skills/gstack; ./setup",
+      "conf": "verified"
+    },
+    {
+      "name": "context-save",
+      "desc": "Save working context. (gstack)",
+      "family": "gstack",
+      "source": "garrytan/gstack",
+      "install": "git clone --depth 1 https://github.com/garrytan/gstack ~/.claude/skills/gstack; cd ~/.claude/skills/gstack; ./setup",
+      "conf": "verified"
+    },
+    {
+      "name": "cso",
+      "desc": "Chief Security Officer mode. (gstack)",
+      "family": "gstack",
+      "source": "garrytan/gstack",
+      "install": "git clone --depth 1 https://github.com/garrytan/gstack ~/.claude/skills/gstack; cd ~/.claude/skills/gstack; ./setup",
+      "conf": "verified"
+    },
+    {
+      "name": "design-consultation",
+      "desc": "Design consultation: understands your product, researches the landscape, proposes a complete design system (aesthetic, typography, color, layout, spacing, motion), and generates font+color preview... (gstack)",
+      "family": "gstack",
+      "source": "garrytan/gstack",
+      "install": "git clone --depth 1 https://github.com/garrytan/gstack ~/.claude/skills/gstack; cd ~/.claude/skills/gstack; ./setup",
+      "conf": "verified"
+    },
+    {
+      "name": "design-html",
+      "desc": "Design finalization: generates production-quality Pretext-native HTML/CSS. (gstack)",
+      "family": "gstack",
+      "source": "garrytan/gstack",
+      "install": "git clone --depth 1 https://github.com/garrytan/gstack ~/.claude/skills/gstack; cd ~/.claude/skills/gstack; ./setup",
+      "conf": "verified"
+    },
+    {
+      "name": "design-review",
+      "desc": "Designer's eye QA: finds visual inconsistency, spacing issues, hierarchy problems, AI slop patterns, and slow interactions — then fixes them. (gstack)",
+      "family": "gstack",
+      "source": "garrytan/gstack",
+      "install": "git clone --depth 1 https://github.com/garrytan/gstack ~/.claude/skills/gstack; cd ~/.claude/skills/gstack; ./setup",
+      "conf": "verified"
+    },
+    {
+      "name": "design-shotgun",
+      "desc": "Design shotgun: generate multiple AI design variants, open a comparison board, collect structured feedback, and iterate. (gstack)",
+      "family": "gstack",
+      "source": "garrytan/gstack",
+      "install": "git clone --depth 1 https://github.com/garrytan/gstack ~/.claude/skills/gstack; cd ~/.claude/skills/gstack; ./setup",
+      "conf": "verified"
+    },
+    {
+      "name": "design-taste-frontend",
+      "desc": "Senior UI/UX Engineer. Architect digital interfaces overriding default LLM biases. Enforces metric-based rules, strict component architecture, CSS hardware acceleration, and balanced design engineering.",
+      "family": "Taste skills",
+      "source": "Leonxlnx/taste-skill",
+      "install": "npx skills add Leonxlnx/taste-skill -g (upstream now ships one merged skill; exact copies come from this repo)",
+      "conf": "likely"
+    },
+    {
+      "name": "devex-review",
+      "desc": "Live developer experience audit. (gstack)",
+      "family": "gstack",
+      "source": "garrytan/gstack",
+      "install": "git clone --depth 1 https://github.com/garrytan/gstack ~/.claude/skills/gstack; cd ~/.claude/skills/gstack; ./setup",
+      "conf": "verified"
+    },
+    {
+      "name": "diagram",
+      "desc": "Turn an English description (or mermaid source) into a diagram triplet: the source, an editable .excalidraw file you can open (gstack)",
+      "family": "gstack",
+      "source": "garrytan/gstack",
+      "install": "git clone --depth 1 https://github.com/garrytan/gstack ~/.claude/skills/gstack; cd ~/.claude/skills/gstack; ./setup",
+      "conf": "verified"
+    },
+    {
+      "name": "document-generate",
+      "desc": "Generate missing documentation from scratch for a feature, module, or entire project. (gstack)",
+      "family": "gstack",
+      "source": "garrytan/gstack",
+      "install": "git clone --depth 1 https://github.com/garrytan/gstack ~/.claude/skills/gstack; cd ~/.claude/skills/gstack; ./setup",
+      "conf": "verified"
+    },
+    {
+      "name": "document-release",
+      "desc": "Post-ship documentation update. (gstack)",
+      "family": "gstack",
+      "source": "garrytan/gstack",
+      "install": "git clone --depth 1 https://github.com/garrytan/gstack ~/.claude/skills/gstack; cd ~/.claude/skills/gstack; ./setup",
+      "conf": "verified"
+    },
+    {
+      "name": "embedded-captions",
+      "desc": "Add captions or subtitles to an existing single-subject talking-head video without editing the footage. Use for plain verbatim captions, cinematic captions embedded behind the subject, VFX captions, “炸/特效/酷炫字幕,” or a named identity from the…",
+      "family": "HyperFrames",
+      "source": "heygen-com/hyperframes",
+      "install": "npx skills add heygen-com/hyperframes --skill embedded-captions -g",
+      "conf": "verified"
+    },
+    {
+      "name": "emil-design-eng",
+      "desc": "This skill encodes Emil Kowalski's philosophy on UI polish, component design, animation decisions, and the invisible details that make software feel great.",
+      "family": "Emil Kowalski",
+      "source": "emilkowalski/skills",
+      "install": "npx skills add emilkowalski/skills --skill emil-design-eng -g",
+      "conf": "verified"
+    },
+    {
+      "name": "faceless-explainer",
+      "desc": "Turn arbitrary text — an article, notes, a topic, a brief — into a faceless explainer video: there is no site or footage to capture, so the visuals are invented per scene (typography, abstract graphics, diagrams, data-viz). Use for topic ex…",
+      "family": "HyperFrames",
+      "source": "heygen-com/hyperframes",
+      "install": "npx skills add heygen-com/hyperframes --skill faceless-explainer -g",
+      "conf": "verified"
+    },
+    {
+      "name": "figma",
+      "desc": "Import Figma content into a HyperFrames composition — rendered assets, brand tokens, components, storyboard sections → reconstructed motion (frames read as states, not slides) (REST/CLI), connector-assisted motion when available, and shader…",
+      "family": "HyperFrames",
+      "source": "heygen-com/hyperframes",
+      "install": "npx skills add heygen-com/hyperframes --skill figma -g",
+      "conf": "verified"
+    },
+    {
+      "name": "find-skills",
+      "desc": "Helps users discover and install agent skills when they ask questions like \"how do I do X\", \"find a skill for X\", \"is there a skill that can...\", or express interest in extending capabilities. This skill should be used when the user is look…",
+      "family": "skills CLI",
+      "source": "vercel-labs/skills",
+      "install": "npx skills add vercel-labs/skills --skill find-skills -g",
+      "conf": "verified"
+    },
+    {
+      "name": "flow-nexus-neural",
+      "desc": "Train and deploy neural networks in distributed E2B sandboxes with Flow Nexus",
+      "family": "Ruflo / claude-flow",
+      "source": "ruvnet/ruflo",
+      "install": "npm i -g ruflo; ruflo init",
+      "conf": "likely"
+    },
+    {
+      "name": "flow-nexus-platform",
+      "desc": "Comprehensive Flow Nexus platform management - authentication, sandboxes, app deployment, payments, and challenges",
+      "family": "Ruflo / claude-flow",
+      "source": "ruvnet/ruflo",
+      "install": "npm i -g ruflo; ruflo init",
+      "conf": "likely"
+    },
+    {
+      "name": "flow-nexus-swarm",
+      "desc": "Cloud-based AI swarm deployment and event-driven workflow automation with Flow Nexus platform",
+      "family": "Ruflo / claude-flow",
+      "source": "ruvnet/ruflo",
+      "install": "npm i -g ruflo; ruflo init",
+      "conf": "likely"
+    },
+    {
+      "name": "freeze",
+      "desc": "Restrict file edits to a specific directory for the session. (gstack)",
+      "family": "gstack",
+      "source": "garrytan/gstack",
+      "install": "git clone --depth 1 https://github.com/garrytan/gstack ~/.claude/skills/gstack; cd ~/.claude/skills/gstack; ./setup",
+      "conf": "verified"
+    },
+    {
+      "name": "frontend-design",
+      "desc": "Create distinctive, production-grade frontend interfaces with high design quality. Use this skill when the user asks to build web components, pages, artifacts, posters, or applications (examples include websites, landing pages, dashboards, …",
+      "family": "Other (copied)",
+      "source": "not recorded",
+      "install": "node workspace.js restore",
+      "conf": "snapshot"
+    },
+    {
+      "name": "full-output-enforcement",
+      "desc": "Overrides default LLM truncation behavior. Enforces complete code generation, bans placeholder patterns, and handles token-limit splits cleanly. Apply to any task requiring exhaustive, unabridged output.",
+      "family": "Taste skills",
+      "source": "Leonxlnx/taste-skill",
+      "install": "npx skills add Leonxlnx/taste-skill -g (upstream now ships one merged skill; exact copies come from this repo)",
+      "conf": "likely"
+    },
+    {
+      "name": "general-video",
+      "desc": "Author or edit a custom HyperFrames composition when no specialized workflow fits, or when BRIEF.md sets flow: companion. Use for longer or multi-scene pieces, brand and sizzle reels, montages, static loops, static title cards, footage remi…",
+      "family": "HyperFrames",
+      "source": "heygen-com/hyperframes",
+      "install": "npx skills add heygen-com/hyperframes --skill general-video -g",
+      "conf": "verified"
+    },
+    {
+      "name": "github-code-review",
+      "desc": "Comprehensive GitHub code review with AI-powered swarm coordination",
+      "family": "Ruflo / claude-flow",
+      "source": "ruvnet/ruflo",
+      "install": "npm i -g ruflo; ruflo init",
+      "conf": "likely"
+    },
+    {
+      "name": "github-multi-repo",
+      "desc": "Multi-repository coordination, synchronization, and architecture management with AI swarm orchestration",
+      "family": "Ruflo / claude-flow",
+      "source": "ruvnet/ruflo",
+      "install": "npm i -g ruflo; ruflo init",
+      "conf": "likely"
+    },
+    {
+      "name": "github-project-management",
+      "desc": "Comprehensive GitHub project management with swarm-coordinated issue tracking, project board automation, and sprint planning",
+      "family": "Ruflo / claude-flow",
+      "source": "ruvnet/ruflo",
+      "install": "npm i -g ruflo; ruflo init",
+      "conf": "likely"
+    },
+    {
+      "name": "github-release-management",
+      "desc": "Comprehensive GitHub release orchestration with AI swarm coordination for automated versioning, testing, deployment, and rollback management",
+      "family": "Ruflo / claude-flow",
+      "source": "ruvnet/ruflo",
+      "install": "npm i -g ruflo; ruflo init",
+      "conf": "likely"
+    },
+    {
+      "name": "github-workflow-automation",
+      "desc": "Advanced GitHub Actions workflow automation with AI swarm coordination, intelligent CI/CD pipelines, and comprehensive repository management",
+      "family": "Ruflo / claude-flow",
+      "source": "ruvnet/ruflo",
+      "install": "npm i -g ruflo; ruflo init",
+      "conf": "likely"
+    },
+    {
+      "name": "gpt-taste",
+      "desc": "Elite UX/UI & Advanced GSAP Motion Engineer. Enforces Python-driven true randomization for layout variance, strict AIDA page structure, wide editorial typography (bans 6-line wraps), gapless bento grids, strict GSAP ScrollTriggers (pinning,…",
+      "family": "Taste skills",
+      "source": "Leonxlnx/taste-skill",
+      "install": "npx skills add Leonxlnx/taste-skill -g (upstream now ships one merged skill; exact copies come from this repo)",
+      "conf": "likely"
+    },
+    {
+      "name": "graphify",
+      "desc": "Use for any question about a codebase, its architecture, file relationships, or project content — especially when graphify-out/ exists, where the question should be treated as a graphify query first. Turns any input (code, docs, papers, ima…",
+      "family": "graphify",
+      "source": "Graphify-Labs/graphify",
+      "install": "uv tool install graphifyy; graphify install",
+      "conf": "likely"
+    },
+    {
+      "name": "gstack",
+      "desc": "Router for the gstack skill suite. (gstack)",
+      "family": "gstack",
+      "source": "garrytan/gstack",
+      "install": "git clone --depth 1 https://github.com/garrytan/gstack.git ~/.claude/skills/gstack",
+      "conf": "verified"
+    },
+    {
+      "name": "gstack-upgrade",
+      "desc": "Upgrade gstack to the latest version.",
+      "family": "gstack",
+      "source": "garrytan/gstack",
+      "install": "git clone --depth 1 https://github.com/garrytan/gstack ~/.claude/skills/gstack; cd ~/.claude/skills/gstack; ./setup",
+      "conf": "verified"
+    },
+    {
+      "name": "guard",
+      "desc": "Full safety mode: destructive command warnings + directory-scoped edits. (gstack)",
+      "family": "gstack",
+      "source": "garrytan/gstack",
+      "install": "git clone --depth 1 https://github.com/garrytan/gstack ~/.claude/skills/gstack; cd ~/.claude/skills/gstack; ./setup",
+      "conf": "verified"
+    },
+    {
+      "name": "health",
+      "desc": "Code quality dashboard. (gstack)",
+      "family": "gstack",
+      "source": "garrytan/gstack",
+      "install": "git clone --depth 1 https://github.com/garrytan/gstack ~/.claude/skills/gstack; cd ~/.claude/skills/gstack; ./setup",
+      "conf": "verified"
+    },
+    {
+      "name": "high-end-visual-design",
+      "desc": "Teaches the AI to design like a high-end agency. Defines the exact fonts, spacing, shadows, card structures, and animations that make a website feel expensive. Blocks all the common defaults that make AI designs look cheap or generic.",
+      "family": "Taste skills",
+      "source": "Leonxlnx/taste-skill",
+      "install": "npx skills add Leonxlnx/taste-skill -g (upstream now ships one merged skill; exact copies come from this repo)",
+      "conf": "likely"
+    },
+    {
+      "name": "hooks-automation",
+      "desc": "Automated coordination, formatting, and learning from Claude Code operations using intelligent hooks with MCP integration. Includes pre/post task hooks, session management, Git integration, memory coordination, and neural pattern training f…",
+      "family": "Ruflo / claude-flow",
+      "source": "ruvnet/ruflo",
+      "install": "npm i -g ruflo; ruflo init",
+      "conf": "likely"
+    },
+    {
+      "name": "humanizer",
+      "desc": "Remove signs of AI-generated writing from text. Use when editing or reviewing text to make it sound more natural and human-written. Based on Wikipedia's comprehensive \"Signs of AI writing\" guide. Detects and fixes patterns including: inflat…",
+      "family": "Git clone",
+      "source": "blader/humanizer",
+      "install": "git clone --depth 1 https://github.com/blader/humanizer.git ~/.claude/skills/humanizer",
+      "conf": "verified"
+    },
+    {
+      "name": "hyperframes",
+      "desc": "Mandatory entry point: read this first for any request to make, create, edit, animate, or render a video, animation, or motion graphic, including a promo, explainer, captioned clip, title card, overlay, slideshow or interactive deck, Remoti…",
+      "family": "HyperFrames",
+      "source": "heygen-com/hyperframes",
+      "install": "npx skills add heygen-com/hyperframes --skill hyperframes -g",
+      "conf": "verified"
+    },
+    {
+      "name": "hyperframes-animation",
+      "desc": "All animation knowledge for HyperFrames — atomic motion rules, multi-phase scene blueprints, scene transitions, broader motion-design techniques, AND the seven runtime adapters (GSAP default, plus Lottie, Three.js, Anime.js, CSS keyframes, …",
+      "family": "HyperFrames",
+      "source": "heygen-com/hyperframes",
+      "install": "npx skills add heygen-com/hyperframes --skill hyperframes-animation -g",
+      "conf": "verified"
+    },
+    {
+      "name": "hyperframes-audio",
+      "desc": "Use when audio already placed in a HyperFrames composition needs to be mixed: fade-in/fade-out, crossfade, track gain or volume, volume automation, ducking, a music bed that fights a voiceover (voiceover carve), effects on a track (EQ, comp…",
+      "family": "HyperFrames",
+      "source": "heygen-com/hyperframes",
+      "install": "npx skills add heygen-com/hyperframes --skill hyperframes-audio -g",
+      "conf": "verified"
+    },
+    {
+      "name": "hyperframes-cli",
+      "desc": "Use the HyperFrames CLI development loop: init, add, catalog, capture, lint, check, snapshot, compare, grade-compare, preview, play, present, beats, keyframes, single or batch render, publish, cloud, cloudrun, feedback, lambda, doctor, brow…",
+      "family": "HyperFrames",
+      "source": "heygen-com/hyperframes",
+      "install": "npx skills add heygen-com/hyperframes --skill hyperframes-cli -g",
+      "conf": "verified"
+    },
+    {
+      "name": "hyperframes-core",
+      "desc": "The HyperFrames composition contract — build one renderable project. Use for composition structure, the `data-*` timing attributes, `class=\"clip\"`, tracks, sub-compositions, variables, framework-owned media playback, deterministic-render ru…",
+      "family": "HyperFrames",
+      "source": "heygen-com/hyperframes",
+      "install": "npx skills add heygen-com/hyperframes --skill hyperframes-core -g",
+      "conf": "verified"
+    },
+    {
+      "name": "hyperframes-creative",
+      "desc": "Non-animation creative direction for HyperFrames videos. Use for design spec (frame.md / design.md) handling, palettes, typography, narration, beat planning, audio-reactive visuals, composition patterns, and brand / style decisions. For ato…",
+      "family": "HyperFrames",
+      "source": "heygen-com/hyperframes",
+      "install": "npx skills add heygen-com/hyperframes --skill hyperframes-creative -g",
+      "conf": "verified"
+    },
+    {
+      "name": "hyperframes-keyframes",
+      "desc": "Use when a HyperFrames composition needs a punch-in, punch-out, zoom, reframe, Ken Burns treatment, camera move, visual match/whip handoff, or other seek-safe 2D/3D keyframes; also for GSAP, CSS keyframes, Anime.js, WAAPI, FLIP, paths, mask…",
+      "family": "HyperFrames",
+      "source": "heygen-com/hyperframes",
+      "install": "npx skills add heygen-com/hyperframes --skill hyperframes-keyframes -g",
+      "conf": "verified"
+    },
+    {
+      "name": "hyperframes-media",
+      "desc": "Audio and media assets for HyperFrames compositions, produced by one shared audio engine (`scripts/audio.mjs`) — multi-provider TTS (HeyGen / ElevenLabs / Kokoro local), background music + sound effects (HeyGen audio-library retrieval by de…",
+      "family": "HyperFrames",
+      "source": "heygen-com/hyperframes",
+      "install": "npx skills add heygen-com/hyperframes -g",
+      "conf": "likely"
+    },
+    {
+      "name": "hyperframes-registry",
+      "desc": "Search, install, and wire registry blocks and components into HyperFrames compositions. Use BEFORE hand-building any named visual — whenever a brief, a user, or a storyboard names a look, effect, treatment, or transition such as CRT scanlin…",
+      "family": "HyperFrames",
+      "source": "heygen-com/hyperframes",
+      "install": "npx skills add heygen-com/hyperframes --skill hyperframes-registry -g",
+      "conf": "verified"
+    },
+    {
+      "name": "image-to-code",
+      "desc": "Elite website image-to-code skill for Codex. For visually important web tasks, it must first generate the design image(s) itself, deeply analyze them, then implement the website to match them as closely as possible. In Codex, it must prefer…",
+      "family": "Taste skills",
+      "source": "Leonxlnx/taste-skill",
+      "install": "npx skills add Leonxlnx/taste-skill -g (upstream now ships one merged skill; exact copies come from this repo)",
+      "conf": "likely"
+    },
+    {
+      "name": "imagegen-frontend-mobile",
+      "desc": "Elite mobile app image-generation skill for creating premium, app-native screen concepts and flows. Designed for iOS, Android, and cross-platform mobile products. Prioritizes clean hierarchy, comfortably readable text, strong multi-screen c…",
+      "family": "Taste skills",
+      "source": "Leonxlnx/taste-skill",
+      "install": "npx skills add Leonxlnx/taste-skill -g (upstream now ships one merged skill; exact copies come from this repo)",
+      "conf": "likely"
+    },
+    {
+      "name": "imagegen-frontend-web",
+      "desc": "Elite frontend image-direction skill for generating premium, conversion-aware website design references. CRITICAL OUTPUT RULE — generate ONE separate horizontal image FOR EVERY section. A landing page with 8 sections produces 8 images. Neve…",
+      "family": "Taste skills",
+      "source": "Leonxlnx/taste-skill",
+      "install": "npx skills add Leonxlnx/taste-skill -g (upstream now ships one merged skill; exact copies come from this repo)",
+      "conf": "likely"
+    },
+    {
+      "name": "impeccable",
+      "desc": "Use when the user wants to design, redesign, shape, critique, audit, polish, clarify, distill, harden, optimize, adapt, animate, colorize, extract, or otherwise improve a frontend interface. Covers websites, landing pages, dashboards, produ…",
+      "family": "Impeccable",
+      "source": "pbakaus/impeccable",
+      "install": "npx skills add pbakaus/impeccable -g",
+      "conf": "verified"
+    },
+    {
+      "name": "industrial-brutalist-ui",
+      "desc": "Raw mechanical interfaces fusing Swiss typographic print with military terminal aesthetics. Rigid grids, extreme type scale contrast, utilitarian color, analog degradation effects. For data-heavy dashboards, portfolios, or editorial sites t…",
+      "family": "Taste skills",
+      "source": "Leonxlnx/taste-skill",
+      "install": "npx skills add Leonxlnx/taste-skill -g (upstream now ships one merged skill; exact copies come from this repo)",
+      "conf": "likely"
+    },
+    {
+      "name": "investigate",
+      "desc": "Systematic debugging with root cause investigation. (gstack)",
+      "family": "gstack",
+      "source": "garrytan/gstack",
+      "install": "git clone --depth 1 https://github.com/garrytan/gstack ~/.claude/skills/gstack; cd ~/.claude/skills/gstack; ./setup",
+      "conf": "verified"
+    },
+    {
+      "name": "ios-clean",
+      "desc": "Remove the DebugBridge SPM package and all #if DEBUG wiring from an iOS app. (gstack)",
+      "family": "gstack",
+      "source": "garrytan/gstack",
+      "install": "git clone --depth 1 https://github.com/garrytan/gstack ~/.claude/skills/gstack; cd ~/.claude/skills/gstack; ./setup",
+      "conf": "verified"
+    },
+    {
+      "name": "ios-design-review",
+      "desc": "Visual design audit for iOS apps on real hardware. (gstack)",
+      "family": "gstack",
+      "source": "garrytan/gstack",
+      "install": "git clone --depth 1 https://github.com/garrytan/gstack ~/.claude/skills/gstack; cd ~/.claude/skills/gstack; ./setup",
+      "conf": "verified"
+    },
+    {
+      "name": "ios-fix",
+      "desc": "Autonomous iOS bug fixer. (gstack)",
+      "family": "gstack",
+      "source": "garrytan/gstack",
+      "install": "git clone --depth 1 https://github.com/garrytan/gstack ~/.claude/skills/gstack; cd ~/.claude/skills/gstack; ./setup",
+      "conf": "verified"
+    },
+    {
+      "name": "ios-qa",
+      "desc": "Live-device iOS QA for SwiftUI apps. (gstack)",
+      "family": "gstack",
+      "source": "garrytan/gstack",
+      "install": "git clone --depth 1 https://github.com/garrytan/gstack ~/.claude/skills/gstack; cd ~/.claude/skills/gstack; ./setup",
+      "conf": "verified"
+    },
+    {
+      "name": "ios-sync",
+      "desc": "Regenerate the iOS debug bridge against the latest upstream gstack templates. (gstack)",
+      "family": "gstack",
+      "source": "garrytan/gstack",
+      "install": "git clone --depth 1 https://github.com/garrytan/gstack ~/.claude/skills/gstack; cd ~/.claude/skills/gstack; ./setup",
+      "conf": "verified"
+    },
+    {
+      "name": "land-and-deploy",
+      "desc": "Land and deploy workflow. (gstack)",
+      "family": "gstack",
+      "source": "garrytan/gstack",
+      "install": "git clone --depth 1 https://github.com/garrytan/gstack ~/.claude/skills/gstack; cd ~/.claude/skills/gstack; ./setup",
+      "conf": "verified"
+    },
+    {
+      "name": "landing-report",
+      "desc": "Read-only queue dashboard for workspace-aware ship. (gstack)",
+      "family": "gstack",
+      "source": "garrytan/gstack",
+      "install": "git clone --depth 1 https://github.com/garrytan/gstack ~/.claude/skills/gstack; cd ~/.claude/skills/gstack; ./setup",
+      "conf": "verified"
+    },
+    {
+      "name": "learn",
+      "desc": "Manage project learnings.",
+      "family": "gstack",
+      "source": "garrytan/gstack",
+      "install": "git clone --depth 1 https://github.com/garrytan/gstack ~/.claude/skills/gstack; cd ~/.claude/skills/gstack; ./setup",
+      "conf": "verified"
+    },
+    {
+      "name": "make-pdf",
+      "desc": "Turn any markdown file into a publication-quality PDF. (gstack)",
+      "family": "gstack",
+      "source": "garrytan/gstack",
+      "install": "git clone --depth 1 https://github.com/garrytan/gstack ~/.claude/skills/gstack; cd ~/.claude/skills/gstack; ./setup",
+      "conf": "verified"
+    },
+    {
+      "name": "media-use",
+      "desc": "Agent Media OS, the single skill for every media need in a HyperFrames project. Resolve BGM, SFX, image, icon, brand logo, voice, color grade, or LUT into a frozen local file or paste-ready block + ledger record (one verb, `resolve`); gener…",
+      "family": "HyperFrames",
+      "source": "heygen-com/hyperframes",
+      "install": "npx skills add heygen-com/hyperframes --skill media-use -g",
+      "conf": "verified"
+    },
+    {
+      "name": "minimalist-ui",
+      "desc": "Clean editorial-style interfaces. Warm monochrome palette, typographic contrast, flat bento grids, muted pastels. No gradients, no heavy shadows.",
+      "family": "Taste skills",
+      "source": "Leonxlnx/taste-skill",
+      "install": "npx skills add Leonxlnx/taste-skill -g (upstream now ships one merged skill; exact copies come from this repo)",
+      "conf": "likely"
+    },
+    {
+      "name": "motion-graphics",
+      "desc": "A short, design-led motion graphic where motion is the message — kinetic typography, stat count-up, chart/data-viz hit, logo sting / brand lockup, lower-third / callout / social overlay, animated map (highlight regions, connect places, zoom…",
+      "family": "HyperFrames",
+      "source": "heygen-com/hyperframes",
+      "install": "npx skills add heygen-com/hyperframes --skill motion-graphics -g",
+      "conf": "verified"
+    },
+    {
+      "name": "music-to-video",
+      "desc": "Turn a music track (an audio file, a video to pull audio from, or a track generated from a mood brief) into a beat-synced video — lyric video, slideshow, or kinetic promo. The music drives all pacing; any user-supplied images/videos are cut…",
+      "family": "HyperFrames",
+      "source": "heygen-com/hyperframes",
+      "install": "npx skills add heygen-com/hyperframes --skill music-to-video -g",
+      "conf": "verified"
+    },
+    {
+      "name": "office-hours",
+      "desc": "YC Office Hours — two modes. (gstack)",
+      "family": "gstack",
+      "source": "garrytan/gstack",
+      "install": "git clone --depth 1 https://github.com/garrytan/gstack ~/.claude/skills/gstack; cd ~/.claude/skills/gstack; ./setup",
+      "conf": "verified"
+    },
+    {
+      "name": "omni-agents-a2a",
+      "desc": "Interact with OmniRoute via JSON-RPC 2.0 agent-to-agent protocol. 6 built-in A2A skills: smart-routing, quota-management, provider-discovery, cost-analysis, health-report, list-capabilities.",
+      "family": "OmniRoute",
+      "source": "diegosouzapw/OmniRoute",
+      "install": "npm i -g omniroute",
+      "conf": "likely"
+    },
+    {
+      "name": "omni-api-keys",
+      "desc": "Create, list, rotate, and revoke OmniRoute API keys. Control per-key scopes, spending limits, and expiration. Keys gate access to all proxy and management endpoints.",
+      "family": "OmniRoute",
+      "source": "diegosouzapw/OmniRoute",
+      "install": "npm i -g omniroute",
+      "conf": "likely"
+    },
+    {
+      "name": "omni-auth",
+      "desc": "Manage API key authentication and session tokens. Start here to authenticate requests via Bearer token, obtain session cookies, and configure login requirements for the OmniRoute API.",
+      "family": "OmniRoute",
+      "source": "diegosouzapw/OmniRoute",
+      "install": "npm i -g omniroute",
+      "conf": "likely"
+    },
+    {
+      "name": "omni-budget",
+      "desc": "Configure spending limits, token quotas, and rate-limit policies per API key or globally. Inspect current consumption and enforce cost controls across providers.",
+      "family": "OmniRoute",
+      "source": "diegosouzapw/OmniRoute",
+      "install": "npm i -g omniroute",
+      "conf": "likely"
+    },
+    {
+      "name": "omni-cache",
+      "desc": "Manage the LLM response cache. View cache statistics, clear entries, configure TTL policies, and control semantic-similarity caching thresholds.",
+      "family": "OmniRoute",
+      "source": "diegosouzapw/OmniRoute",
+      "install": "npm i -g omniroute",
+      "conf": "likely"
+    },
+    {
+      "name": "omni-cli-tools",
+      "desc": "Manage CLI tool integrations exposed via the API. List, configure, and invoke CLI tool plugins that extend OmniRoute's automation surface.",
+      "family": "OmniRoute",
+      "source": "diegosouzapw/OmniRoute",
+      "install": "npm i -g omniroute",
+      "conf": "likely"
+    },
+    {
+      "name": "omni-combos-routing",
+      "desc": "Create and manage routing combos with 14 strategies (priority, weighted, round-robin, Auto-combo, etc.). Configure fallback chains, test routing outcomes, and retrieve combo metrics.",
+      "family": "OmniRoute",
+      "source": "diegosouzapw/OmniRoute",
+      "install": "npm i -g omniroute",
+      "conf": "likely"
+    },
+    {
+      "name": "omni-compression",
+      "desc": "Configure RTK (command output), Caveman (prose), and stacked compression modes. Manage language packs, custom rules, and test prompt compression reducing tokens by 60–90%.",
+      "family": "OmniRoute",
+      "source": "diegosouzapw/OmniRoute",
+      "install": "npm i -g omniroute",
+      "conf": "likely"
+    },
+    {
+      "name": "omni-context-rtk",
+      "desc": "Configure RTK filters, context engineering rules, and context relay settings. Test compression with real prompt samples and manage context transformation pipelines.",
+      "family": "OmniRoute",
+      "source": "diegosouzapw/OmniRoute",
+      "install": "npm i -g omniroute",
+      "conf": "likely"
+    },
+    {
+      "name": "omni-db-backups",
+      "desc": "Trigger system backups, restore from backup files, and manage the SQLite database lifecycle. Supports export, import, and incremental snapshot strategies.",
+      "family": "OmniRoute",
+      "source": "diegosouzapw/OmniRoute",
+      "install": "npm i -g omniroute",
+      "conf": "likely"
+    },
+    {
+      "name": "omni-github-skills",
+      "desc": "Search, score, scan, and import agent skills from GitHub repositories that contain SKILL.md, CLAUDE.md, .cursorrules, and similar agent skill files. Discover community skills across 160+ provider categories, evaluate relevance with heuristi…",
+      "family": "OmniRoute",
+      "source": "diegosouzapw/OmniRoute",
+      "install": "npm i -g omniroute",
+      "conf": "likely"
+    },
+    {
+      "name": "omni-inference",
+      "desc": "The core OpenAI-compatible inference endpoints: chat completions, embeddings, images, audio (TTS/STT), moderations, rerank, and the Responses API. The primary integration surface for AI agents.",
+      "family": "OmniRoute",
+      "source": "diegosouzapw/OmniRoute",
+      "install": "npm i -g omniroute",
+      "conf": "likely"
+    },
+    {
+      "name": "omni-mcp",
+      "desc": "Connect to the OmniRoute MCP server (37 tools, 3 transports: SSE/stdio/HTTP). Covers routing, cache, compression, memory, skills, providers, and audit tools across 16 permission scopes.",
+      "family": "OmniRoute",
+      "source": "diegosouzapw/OmniRoute",
+      "install": "npm i -g omniroute",
+      "conf": "likely"
+    },
+    {
+      "name": "omni-models",
+      "desc": "Query available AI models across all configured providers. List models, resolve model aliases, and browse the full model catalog including provider-specific variants.",
+      "family": "OmniRoute",
+      "source": "diegosouzapw/OmniRoute",
+      "install": "npm i -g omniroute",
+      "conf": "likely"
+    },
+    {
+      "name": "omni-providers",
+      "desc": "Manage provider connections, API keys, OAuth flows, and connection tests via the REST API. List, add, update, remove, and test AI provider integrations (OpenAI, Anthropic, Gemini, and 160+).",
+      "family": "OmniRoute",
+      "source": "diegosouzapw/OmniRoute",
+      "install": "npm i -g omniroute",
+      "conf": "likely"
+    },
+    {
+      "name": "omni-proxies",
+      "desc": "Configure HTTP/HTTPS/SOCKS proxies for upstream provider requests. Set per-provider or global proxy rules, test connectivity, and manage proxy rotation.",
+      "family": "OmniRoute",
+      "source": "diegosouzapw/OmniRoute",
+      "install": "npm i -g omniroute",
+      "conf": "likely"
+    },
+    {
+      "name": "omni-resilience",
+      "desc": "Monitor provider health, circuit-breaker states, p50/p95/p99 latency metrics, and budget guard alerts. Inspect connection cooldowns and model lockouts in real time.",
+      "family": "OmniRoute",
+      "source": "diegosouzapw/OmniRoute",
+      "install": "npm i -g omniroute",
+      "conf": "likely"
+    },
+    {
+      "name": "omni-settings",
+      "desc": "Read and update global application settings: system prompts, thinking budget, IP filters, payload rules, combo defaults, and require-login configuration.",
+      "family": "OmniRoute",
+      "source": "diegosouzapw/OmniRoute",
+      "install": "npm i -g omniroute",
+      "conf": "likely"
+    },
+    {
+      "name": "omni-sync-cloud",
+      "desc": "Synchronise OmniRoute configuration, provider connections, and settings to/from cloud storage. Manage cloud worker authentication and remote backup targets.",
+      "family": "OmniRoute",
+      "source": "diegosouzapw/OmniRoute",
+      "install": "npm i -g omniroute",
+      "conf": "likely"
+    },
+    {
+      "name": "omni-tunnels",
+      "desc": "Create and manage secure tunnels (ngrok, Cloudflare Tunnel, custom) to expose OmniRoute to the internet or share access with remote agents and CI pipelines.",
+      "family": "OmniRoute",
+      "source": "diegosouzapw/OmniRoute",
+      "install": "npm i -g omniroute",
+      "conf": "likely"
+    },
+    {
+      "name": "omni-usage-logs",
+      "desc": "Access detailed call logs and usage analytics. Filter by provider, model, time range, status, and cost. Export logs and aggregate token usage across all connections.",
+      "family": "OmniRoute",
+      "source": "diegosouzapw/OmniRoute",
+      "install": "npm i -g omniroute",
+      "conf": "likely"
+    },
+    {
+      "name": "omni-version-manager",
+      "desc": "Install, start, stop, restart, and update embedded services (9Router, CLIProxyAPI). Monitor service status, retrieve logs, and configure auto-start for local-only service endpoints.",
+      "family": "OmniRoute",
+      "source": "diegosouzapw/OmniRoute",
+      "install": "npm i -g omniroute",
+      "conf": "likely"
+    },
+    {
+      "name": "omni-webhooks",
+      "desc": "Register, list, test, and remove webhook endpoints. Configure event subscriptions (request.completed, provider.error, budget.exceeded, etc.) and manage delivery retries.",
+      "family": "OmniRoute",
+      "source": "diegosouzapw/OmniRoute",
+      "install": "npm i -g omniroute",
+      "conf": "likely"
+    },
+    {
+      "name": "open-gstack-browser",
+      "desc": "Launch GStack Browser — AI-controlled Chromium with the sidebar extension baked in.",
+      "family": "gstack",
+      "source": "garrytan/gstack",
+      "install": "git clone --depth 1 https://github.com/garrytan/gstack ~/.claude/skills/gstack; cd ~/.claude/skills/gstack; ./setup",
+      "conf": "verified"
+    },
+    {
+      "name": "opus-videos",
+      "desc": "Library of 703 real prompts people used to make viral videos with Claude Opus 5.5 by writing animation as code (Canvas, SVG, Three.js, GLSL shaders, GSAP, CSS, audio). Use when making a code-rendered video, motion graphic, explainer, 3D sce…",
+      "family": "Git clone",
+      "source": "yihui-dev/awesome-opus5-5-videos",
+      "install": "git clone --depth 1 https://github.com/yihui-dev/awesome-opus5-5-videos ~/.claude/skills/opus-videos",
+      "conf": "verified"
+    },
+    {
+      "name": "pair-agent",
+      "desc": "Pair a remote AI agent with your browser. (gstack)",
+      "family": "gstack",
+      "source": "garrytan/gstack",
+      "install": "git clone --depth 1 https://github.com/garrytan/gstack ~/.claude/skills/gstack; cd ~/.claude/skills/gstack; ./setup",
+      "conf": "verified"
+    },
+    {
+      "name": "pair-programming",
+      "desc": "AI-assisted pair programming with multiple modes (driver/navigator/switch), real-time verification, quality monitoring, and comprehensive testing. Supports TDD, debugging, refactoring, and learning sessions. Features automatic role switchin…",
+      "family": "Ruflo / claude-flow",
+      "source": "ruvnet/ruflo",
+      "install": "npm i -g ruflo; ruflo init",
+      "conf": "likely"
+    },
+    {
+      "name": "plan-ceo-review",
+      "desc": "CEO/founder-mode plan review. (gstack)",
+      "family": "gstack",
+      "source": "garrytan/gstack",
+      "install": "git clone --depth 1 https://github.com/garrytan/gstack ~/.claude/skills/gstack; cd ~/.claude/skills/gstack; ./setup",
+      "conf": "verified"
+    },
+    {
+      "name": "plan-design-review",
+      "desc": "Designer's eye plan review — interactive, like CEO and Eng review. (gstack)",
+      "family": "gstack",
+      "source": "garrytan/gstack",
+      "install": "git clone --depth 1 https://github.com/garrytan/gstack ~/.claude/skills/gstack; cd ~/.claude/skills/gstack; ./setup",
+      "conf": "verified"
+    },
+    {
+      "name": "plan-devex-review",
+      "desc": "Interactive developer experience plan review. (gstack)",
+      "family": "gstack",
+      "source": "garrytan/gstack",
+      "install": "git clone --depth 1 https://github.com/garrytan/gstack ~/.claude/skills/gstack; cd ~/.claude/skills/gstack; ./setup",
+      "conf": "verified"
+    },
+    {
+      "name": "plan-eng-review",
+      "desc": "Eng manager-mode plan review. (gstack)",
+      "family": "gstack",
+      "source": "garrytan/gstack",
+      "install": "git clone --depth 1 https://github.com/garrytan/gstack ~/.claude/skills/gstack; cd ~/.claude/skills/gstack; ./setup",
+      "conf": "verified"
+    },
+    {
+      "name": "plan-tune",
+      "desc": "Self-tuning question sensitivity + developer psychographic for gstack (v1: observational). (gstack)",
+      "family": "gstack",
+      "source": "garrytan/gstack",
+      "install": "git clone --depth 1 https://github.com/garrytan/gstack ~/.claude/skills/gstack; cd ~/.claude/skills/gstack; ./setup",
+      "conf": "verified"
+    },
+    {
+      "name": "ponytail",
+      "desc": "Forces the laziest solution that actually works, simplest, shortest, most minimal. Channels a senior dev who has seen everything: question whether the task needs to exist at all (YAGNI), reach for the standard library before custom code, na…",
+      "family": "ponytail",
+      "source": "DietrichGebert/ponytail",
+      "install": "claude plugin marketplace add DietrichGebert/ponytail; claude plugin install ponytail@ponytail",
+      "conf": "verified"
+    },
+    {
+      "name": "ponytail-audit",
+      "desc": "Whole-repo audit for over-engineering. Like ponytail-review, but scans the entire codebase instead of a diff: a ranked list of what to delete, simplify, or replace with stdlib/native equivalents. Use when the user says \"audit this codebase\"…",
+      "family": "ponytail",
+      "source": "DietrichGebert/ponytail",
+      "install": "claude plugin marketplace add DietrichGebert/ponytail; claude plugin install ponytail@ponytail",
+      "conf": "verified"
+    },
+    {
+      "name": "ponytail-debt",
+      "desc": "Harvest every `ponytail:` comment in the codebase into a debt ledger, so the deliberate shortcuts and deferrals ponytail leaves behind get tracked instead of rotting into \"later means never\". Use when the user says \"ponytail debt\", \"/ponyta…",
+      "family": "ponytail",
+      "source": "DietrichGebert/ponytail",
+      "install": "claude plugin marketplace add DietrichGebert/ponytail; claude plugin install ponytail@ponytail",
+      "conf": "verified"
+    },
+    {
+      "name": "ponytail-gain",
+      "desc": "Show ponytail's measured impact as a compact scoreboard: less code, less cost, more speed, from the benchmark medians. One-shot display, not a persistent mode, and not a per-repo number. Trigger: /ponytail-gain, \"ponytail gain\", \"what does …",
+      "family": "ponytail",
+      "source": "DietrichGebert/ponytail",
+      "install": "claude plugin marketplace add DietrichGebert/ponytail; claude plugin install ponytail@ponytail",
+      "conf": "verified"
+    },
+    {
+      "name": "ponytail-help",
+      "desc": "Quick-reference card for all ponytail modes, skills, and commands. One-shot display, not a persistent mode. Trigger: /ponytail-help, \"ponytail help\", \"what ponytail commands\", \"how do I use ponytail\".",
+      "family": "ponytail",
+      "source": "DietrichGebert/ponytail",
+      "install": "claude plugin marketplace add DietrichGebert/ponytail; claude plugin install ponytail@ponytail",
+      "conf": "verified"
+    },
+    {
+      "name": "ponytail-review",
+      "desc": "Code review focused exclusively on over-engineering. Finds what to delete: reinvented standard library, unneeded dependencies, speculative abstractions, dead flexibility. One line per finding: location, what to cut, what replaces it. Use wh…",
+      "family": "ponytail",
+      "source": "DietrichGebert/ponytail",
+      "install": "claude plugin marketplace add DietrichGebert/ponytail; claude plugin install ponytail@ponytail",
+      "conf": "verified"
+    },
+    {
+      "name": "pr-to-video",
+      "desc": "Turn a GitHub pull request (a PR URL, owner/repo#N, or 'this PR' in a checked-out repo) into a code-change explainer video — changelog, feature reveal, fix, or refactor walkthrough built from the diff, commits, and files: the input is a cod…",
+      "family": "HyperFrames",
+      "source": "heygen-com/hyperframes",
+      "install": "npx skills add heygen-com/hyperframes --skill pr-to-video -g",
+      "conf": "verified"
+    },
+    {
+      "name": "product-launch-video",
+      "desc": "Turn a product or marketing URL, pasted script, or brief into a product launch / promo video — SaaS promos, feature reveals, product demos, app and company launches. Use when the user wants to market, launch, promote, or reveal a product; t…",
+      "family": "HyperFrames",
+      "source": "heygen-com/hyperframes",
+      "install": "npx skills add heygen-com/hyperframes --skill product-launch-video -g",
+      "conf": "verified"
+    },
+    {
+      "name": "promo-video-generator",
+      "desc": "Make cinematic 1080p/60fps motion-graphics promo videos from HTML/CSS/JS (pure seek(t) scenes, Chrome sub-frame motion blur, synthesised soundtrack, ffmpeg MP4). Use when asked for a product/launch promo, motion-graphics film, YouTube short…",
+      "family": "Git clone",
+      "source": "visser23/promo-video-generator",
+      "install": "git clone --depth 1 https://github.com/visser23/promo-video-generator.git ~/.claude/skills/promo-video-generator",
+      "conf": "verified"
+    },
+    {
+      "name": "qa",
+      "desc": "Systematically QA test a web application and fix bugs found. (gstack)",
+      "family": "gstack",
+      "source": "garrytan/gstack",
+      "install": "git clone --depth 1 https://github.com/garrytan/gstack ~/.claude/skills/gstack; cd ~/.claude/skills/gstack; ./setup",
+      "conf": "verified"
+    },
+    {
+      "name": "qa-only",
+      "desc": "Report-only QA testing. (gstack)",
+      "family": "gstack",
+      "source": "garrytan/gstack",
+      "install": "git clone --depth 1 https://github.com/garrytan/gstack ~/.claude/skills/gstack; cd ~/.claude/skills/gstack; ./setup",
+      "conf": "verified"
+    },
+    {
+      "name": "reasoningbank-agentdb",
+      "desc": "Implement ReasoningBank adaptive learning with AgentDB's 150x faster vector database. Includes trajectory tracking, verdict judgment, memory distillation, and pattern recognition. Use when building self-learning agents, optimizing decision-…",
+      "family": "Ruflo / claude-flow",
+      "source": "ruvnet/ruflo",
+      "install": "npm i -g ruflo; ruflo init",
+      "conf": "likely"
+    },
+    {
+      "name": "reasoningbank-intelligence",
+      "desc": "Implement adaptive learning with ReasoningBank for pattern recognition, strategy optimization, and continuous improvement. Use when building self-learning agents, optimizing workflows, or implementing meta-cognitive systems.",
+      "family": "Ruflo / claude-flow",
+      "source": "ruvnet/ruflo",
+      "install": "npm i -g ruflo; ruflo init",
+      "conf": "likely"
+    },
+    {
+      "name": "redesign-existing-projects",
+      "desc": "Upgrades existing websites and apps to premium quality. Audits current design, identifies generic AI patterns, and applies high-end design standards without breaking functionality. Works with any CSS framework or vanilla CSS.",
+      "family": "Taste skills",
+      "source": "Leonxlnx/taste-skill",
+      "install": "npx skills add Leonxlnx/taste-skill -g (upstream now ships one merged skill; exact copies come from this repo)",
+      "conf": "likely"
+    },
+    {
+      "name": "remotion-to-hyperframes",
+      "desc": "Port an existing Remotion (React) composition''s source to HyperFrames HTML. Use ONLY on an explicit ask to port/convert/migrate/translate a Remotion source — one-way, Remotion-only. A passing Remotion mention, reference-only code, or \"make…",
+      "family": "HyperFrames",
+      "source": "heygen-com/hyperframes",
+      "install": "npx skills add heygen-com/hyperframes --skill remotion-to-hyperframes -g",
+      "conf": "verified"
+    },
+    {
+      "name": "retro",
+      "desc": "Weekly engineering retrospective. (gstack)",
+      "family": "gstack",
+      "source": "garrytan/gstack",
+      "install": "git clone --depth 1 https://github.com/garrytan/gstack ~/.claude/skills/gstack; cd ~/.claude/skills/gstack; ./setup",
+      "conf": "verified"
+    },
+    {
+      "name": "reverse-engineer-anything",
+      "desc": "Reverse engineer native, managed, Electron/JavaScript, packaged, firmware, and browser targets with REA. Use shipped-artifact or requested runtime evidence to explain features, compare versions, decompile code, or guide a reconstruction. Sk…",
+      "family": "REA",
+      "source": "morluto/rea",
+      "install": "npm i -g rea-agents",
+      "conf": "likely"
+    },
+    {
+      "name": "review",
+      "desc": "Pre-landing PR review. (gstack)",
+      "family": "gstack",
+      "source": "garrytan/gstack",
+      "install": "git clone --depth 1 https://github.com/garrytan/gstack ~/.claude/skills/gstack; cd ~/.claude/skills/gstack; ./setup",
+      "conf": "verified"
+    },
+    {
+      "name": "scrape",
+      "desc": "Pull data from a web page. (gstack)",
+      "family": "gstack",
+      "source": "garrytan/gstack",
+      "install": "git clone --depth 1 https://github.com/garrytan/gstack ~/.claude/skills/gstack; cd ~/.claude/skills/gstack; ./setup",
+      "conf": "verified"
+    },
+    {
+      "name": "seo",
+      "desc": "Comprehensive SEO analysis for any website or business type. Full site audits, single-page analysis, technical SEO (crawlability, indexability, Core Web Vitals with INP), schema markup, content quality (E-E-A-T), image optimization, sitemap…",
+      "family": "Claude SEO",
+      "source": "AgriciDaniel/claude-seo",
+      "install": "claude plugin marketplace add AgriciDaniel/claude-seo; claude plugin install claude-seo@agricidaniel-claude-seo",
+      "conf": "likely"
+    },
+    {
+      "name": "seo-ahrefs",
+      "desc": "Ahrefs API analyst (extension). Reads referring domains, backlinks, organic keywords, and content explorer data via the tested @ahrefs/mcp@0.0.11 server. Pairs with seo-backlinks for multi-source confidence weighting.",
+      "family": "Claude SEO",
+      "source": "AgriciDaniel/claude-seo",
+      "install": "claude plugin marketplace add AgriciDaniel/claude-seo; claude plugin install claude-seo@agricidaniel-claude-seo",
+      "conf": "likely"
+    },
+    {
+      "name": "seo-audit",
+      "desc": "Full website SEO audit with parallel subagent delegation. Crawls up to 500 pages, detects business type, delegates to up to 15 specialists (8 always + 7 conditional), generates health score. Use when user says audit, full SEO check, analyze…",
+      "family": "Claude SEO",
+      "source": "AgriciDaniel/claude-seo",
+      "install": "claude plugin marketplace add AgriciDaniel/claude-seo; claude plugin install claude-seo@agricidaniel-claude-seo",
+      "conf": "likely"
+    },
+    {
+      "name": "seo-backlinks",
+      "desc": "Backlink profile analysis: referring domains, anchor text distribution, toxic link detection, competitor gap analysis. Works with free APIs (Moz, Bing Webmaster, Common Crawl) and DataForSEO extension. Use when user says backlinks, link pro…",
+      "family": "Claude SEO",
+      "source": "AgriciDaniel/claude-seo",
+      "install": "claude plugin marketplace add AgriciDaniel/claude-seo; claude plugin install claude-seo@agricidaniel-claude-seo",
+      "conf": "likely"
+    },
+    {
+      "name": "seo-bing",
+      "desc": "Bing Webmaster Tools + IndexNow extension. Microsoft Copilot citations are fed by the Bing index; this skill makes Bing visibility, link data, and IndexNow URL submission first-class.",
+      "family": "Claude SEO",
+      "source": "AgriciDaniel/claude-seo",
+      "install": "claude plugin marketplace add AgriciDaniel/claude-seo; claude plugin install claude-seo@agricidaniel-claude-seo",
+      "conf": "likely"
+    },
+    {
+      "name": "seo-cluster",
+      "desc": "SERP-based semantic topic clustering for content architecture planning. Groups keywords by actual Google SERP overlap (not text similarity), designs hub-and-spoke content clusters with internal link matrices, and generates interactive visua…",
+      "family": "Claude SEO",
+      "source": "AgriciDaniel/claude-seo",
+      "install": "claude plugin marketplace add AgriciDaniel/claude-seo; claude plugin install claude-seo@agricidaniel-claude-seo",
+      "conf": "likely"
+    },
+    {
+      "name": "seo-competitor-pages",
+      "desc": "Generate SEO-optimized competitor comparison and alternatives pages. Covers \"X vs Y\" layouts, \"alternatives to X\" pages, feature matrices, schema markup, and conversion optimization. Use when user says \"comparison page\", \"vs page\", \"alterna…",
+      "family": "Claude SEO",
+      "source": "AgriciDaniel/claude-seo",
+      "install": "claude plugin marketplace add AgriciDaniel/claude-seo; claude plugin install claude-seo@agricidaniel-claude-seo",
+      "conf": "likely"
+    },
+    {
+      "name": "seo-content",
+      "desc": "Content quality and E-E-A-T analysis with AI citation readiness assessment. Use when user says \"content quality\", \"E-E-A-T\", \"content analysis\", \"readability check\", \"thin content\", or \"content audit\".",
+      "family": "Claude SEO",
+      "source": "AgriciDaniel/claude-seo",
+      "install": "claude plugin marketplace add AgriciDaniel/claude-seo; claude plugin install claude-seo@agricidaniel-claude-seo",
+      "conf": "likely"
+    },
+    {
+      "name": "seo-content-brief",
+      "desc": "Generate competitive SEO content briefs with per-section word counts, competitor scoring, keyword density guidance, and page-type templates. Supports both new page briefs and improve-existing-page briefs. Use when user says \"content brief\",…",
+      "family": "Claude SEO",
+      "source": "AgriciDaniel/claude-seo",
+      "install": "claude plugin marketplace add AgriciDaniel/claude-seo; claude plugin install claude-seo@agricidaniel-claude-seo",
+      "conf": "likely"
+    },
+    {
+      "name": "seo-dataforseo",
+      "desc": "Live SEO data via DataForSEO MCP server: SERP analysis, keyword research (volume, difficulty, intent, trends), backlink profiles, on-page analysis, competitor and content analysis, business listings, AI visibility (LLM mention tracking), an…",
+      "family": "Claude SEO",
+      "source": "AgriciDaniel/claude-seo",
+      "install": "claude plugin marketplace add AgriciDaniel/claude-seo; claude plugin install claude-seo@agricidaniel-claude-seo",
+      "conf": "likely"
+    },
+    {
+      "name": "seo-drift",
+      "desc": "SEO drift monitoring: capture baselines of SEO-critical elements, detect changes, and track regressions over time. Git for SEO: baseline, diff, and track changes to your on-page SEO. Use when user says \"SEO drift\", \"baseline\", \"track change…",
+      "family": "Claude SEO",
+      "source": "AgriciDaniel/claude-seo",
+      "install": "claude plugin marketplace add AgriciDaniel/claude-seo; claude plugin install claude-seo@agricidaniel-claude-seo",
+      "conf": "likely"
+    },
+    {
+      "name": "seo-ecommerce",
+      "desc": "E-commerce SEO analysis: Google Shopping visibility, Amazon marketplace intelligence, product schema validation, competitor pricing analysis, and marketplace keyword gaps. Combines on-page product SEO with marketplace data from DataForSEO M…",
+      "family": "Claude SEO",
+      "source": "AgriciDaniel/claude-seo",
+      "install": "claude plugin marketplace add AgriciDaniel/claude-seo; claude plugin install claude-seo@agricidaniel-claude-seo",
+      "conf": "likely"
+    },
+    {
+      "name": "seo-firecrawl",
+      "desc": "Full-site crawling, scraping, and site mapping via Firecrawl MCP. Use when user says \"crawl site\", \"map site\", \"full crawl\", \"find all pages\", \"broken links\", \"site structure\", \"discover pages\", \"JS rendering\", or needs site-wide analysis.",
+      "family": "Claude SEO",
+      "source": "AgriciDaniel/claude-seo",
+      "install": "claude plugin marketplace add AgriciDaniel/claude-seo; claude plugin install claude-seo@agricidaniel-claude-seo",
+      "conf": "likely"
+    },
+    {
+      "name": "seo-flow",
+      "desc": "FLOW framework integration: evidence-led SEO using the Find → Leverage → Optimize → Win loop. Surfaces stage-specific AI prompts from the FLOW knowledge base (41 prompts, CC BY 4.0). Use when user says \"FLOW\", \"FLOW framework\", \"seo flow\", …",
+      "family": "Claude SEO",
+      "source": "AgriciDaniel/claude-seo",
+      "install": "claude plugin marketplace add AgriciDaniel/claude-seo; claude plugin install claude-seo@agricidaniel-claude-seo",
+      "conf": "likely"
+    },
+    {
+      "name": "seo-geo",
+      "desc": "Optimize content for AI Overviews (formerly SGE), ChatGPT web search, Perplexity, and other AI-powered search experiences. Generative Engine Optimization (GEO) analysis including brand mention signals, AI crawler accessibility, llms.txt com…",
+      "family": "Claude SEO",
+      "source": "AgriciDaniel/claude-seo",
+      "install": "claude plugin marketplace add AgriciDaniel/claude-seo; claude plugin install claude-seo@agricidaniel-claude-seo",
+      "conf": "likely"
+    },
+    {
+      "name": "seo-google",
+      "desc": "Google SEO APIs: Search Console (Search Analytics, URL Inspection, Sitemaps), PageSpeed Insights v5, CrUX field data with 25-week history, Indexing API v3, and GA4 organic traffic. Provides real Google field data for Core Web Vitals, indexa…",
+      "family": "Claude SEO",
+      "source": "AgriciDaniel/claude-seo",
+      "install": "claude plugin marketplace add AgriciDaniel/claude-seo; claude plugin install claude-seo@agricidaniel-claude-seo",
+      "conf": "likely"
+    },
+    {
+      "name": "seo-hreflang",
+      "desc": "Hreflang and international SEO audit, validation, and generation. Detects common mistakes, validates language/region codes, and generates correct hreflang implementations. Use when user says \"hreflang\", \"i18n SEO\", \"international SEO\", \"mul…",
+      "family": "Claude SEO",
+      "source": "AgriciDaniel/claude-seo",
+      "install": "claude plugin marketplace add AgriciDaniel/claude-seo; claude plugin install claude-seo@agricidaniel-claude-seo",
+      "conf": "likely"
+    },
+    {
+      "name": "seo-image-gen",
+      "desc": "AI image generation for SEO assets: OG/social preview images, blog hero images, schema images, product photography, infographics. Powered by Gemini via nanobanana-mcp. Requires banana extension installed. Use when user says \\\"generate image…",
+      "family": "Claude SEO",
+      "source": "AgriciDaniel/claude-seo",
+      "install": "claude plugin marketplace add AgriciDaniel/claude-seo; claude plugin install claude-seo@agricidaniel-claude-seo",
+      "conf": "likely"
+    },
+    {
+      "name": "seo-images",
+      "desc": "Image optimization analysis for SEO and performance. Checks alt text, file sizes, formats, responsive images, lazy loading, CLS prevention, image SERP rankings (via DataForSEO), and image file optimization (WebP/AVIF conversion, IPTC/XMP me…",
+      "family": "Claude SEO",
+      "source": "AgriciDaniel/claude-seo",
+      "install": "claude plugin marketplace add AgriciDaniel/claude-seo; claude plugin install claude-seo@agricidaniel-claude-seo",
+      "conf": "likely"
+    },
+    {
+      "name": "seo-local",
+      "desc": "Local SEO analysis covering Google Business Profile optimization, NAP consistency, citation health, review signals, local schema markup, location page quality, multi-location SEO, and industry-specific recommendations. Detects business type…",
+      "family": "Claude SEO",
+      "source": "AgriciDaniel/claude-seo",
+      "install": "claude plugin marketplace add AgriciDaniel/claude-seo; claude plugin install claude-seo@agricidaniel-claude-seo",
+      "conf": "likely"
+    },
+    {
+      "name": "seo-maps",
+      "desc": "Maps intelligence for local SEO: geo-grid rank tracking, GBP profile auditing via API, review intelligence across Google/Tripadvisor/Trustpilot, cross-platform NAP verification, competitor radius mapping, and LocalBusiness schema generation…",
+      "family": "Claude SEO",
+      "source": "AgriciDaniel/claude-seo",
+      "install": "claude plugin marketplace add AgriciDaniel/claude-seo; claude plugin install claude-seo@agricidaniel-claude-seo",
+      "conf": "likely"
+    },
+    {
+      "name": "seo-page",
+      "desc": "Deep single-page SEO analysis covering on-page elements, content quality, technical meta tags, schema, images, and performance. Use when user says \"analyze this page\", \"check page SEO\", \"single URL\", \"check this page\", \"page analysis\", or p…",
+      "family": "Claude SEO",
+      "source": "AgriciDaniel/claude-seo",
+      "install": "claude plugin marketplace add AgriciDaniel/claude-seo; claude plugin install claude-seo@agricidaniel-claude-seo",
+      "conf": "likely"
+    },
+    {
+      "name": "seo-plan",
+      "desc": "Strategic SEO planning for new or existing websites. Industry-specific templates, competitive analysis, content strategy, and implementation roadmap. Use when user says \"SEO plan\", \"SEO strategy\", \"SEO planning\", \"content strategy\", \"keywor…",
+      "family": "Claude SEO",
+      "source": "AgriciDaniel/claude-seo",
+      "install": "claude plugin marketplace add AgriciDaniel/claude-seo; claude plugin install claude-seo@agricidaniel-claude-seo",
+      "conf": "likely"
+    },
+    {
+      "name": "seo-profound",
+      "desc": "Profound LLM citation tracker (extension). Time-series brand citation rates across ChatGPT, Perplexity, and other LLMs. Pairs with seo-seranking for triangulated AI visibility coverage.",
+      "family": "Claude SEO",
+      "source": "AgriciDaniel/claude-seo",
+      "install": "claude plugin marketplace add AgriciDaniel/claude-seo; claude plugin install claude-seo@agricidaniel-claude-seo",
+      "conf": "likely"
+    },
+    {
+      "name": "seo-programmatic",
+      "desc": "Programmatic SEO planning and analysis for pages generated at scale from data sources. Covers template engines, URL patterns, internal linking automation, thin content safeguards, and index bloat prevention. Use when user says \"programmatic…",
+      "family": "Claude SEO",
+      "source": "AgriciDaniel/claude-seo",
+      "install": "claude plugin marketplace add AgriciDaniel/claude-seo; claude plugin install claude-seo@agricidaniel-claude-seo",
+      "conf": "likely"
+    },
+    {
+      "name": "seo-schema",
+      "desc": "Detect, validate, and generate Schema.org structured data. JSON-LD format preferred. Use when user says \"schema\", \"structured data\", \"rich results\", \"JSON-LD\", or \"markup\".",
+      "family": "Claude SEO",
+      "source": "AgriciDaniel/claude-seo",
+      "install": "claude plugin marketplace add AgriciDaniel/claude-seo; claude plugin install claude-seo@agricidaniel-claude-seo",
+      "conf": "likely"
+    },
+    {
+      "name": "seo-seranking",
+      "desc": "SE Ranking AI visibility analyst (extension). Tracks AI Share-of-Voice across ChatGPT, Gemini, Perplexity, AI Overviews, and AI Mode in a single query.",
+      "family": "Claude SEO",
+      "source": "AgriciDaniel/claude-seo",
+      "install": "claude plugin marketplace add AgriciDaniel/claude-seo; claude plugin install claude-seo@agricidaniel-claude-seo",
+      "conf": "likely"
+    },
+    {
+      "name": "seo-sitemap",
+      "desc": "Analyze existing XML sitemaps or generate new ones with industry templates. Validates format, URLs, and structure. Use when user says \"sitemap\", \"generate sitemap\", \"sitemap issues\", or \"XML sitemap\".",
+      "family": "Claude SEO",
+      "source": "AgriciDaniel/claude-seo",
+      "install": "claude plugin marketplace add AgriciDaniel/claude-seo; claude plugin install claude-seo@agricidaniel-claude-seo",
+      "conf": "likely"
+    },
+    {
+      "name": "seo-sxo",
+      "desc": "Search Experience Optimization: reads Google SERPs backwards to detect page-type mismatches, derives user stories from search intent signals, and scores pages from multiple persona perspectives. Identifies why well-optimized pages fail to r…",
+      "family": "Claude SEO",
+      "source": "AgriciDaniel/claude-seo",
+      "install": "claude plugin marketplace add AgriciDaniel/claude-seo; claude plugin install claude-seo@agricidaniel-claude-seo",
+      "conf": "likely"
+    },
+    {
+      "name": "seo-technical",
+      "desc": "Technical SEO audit across 9 categories: crawlability, indexability, security, URL structure, mobile, Core Web Vitals, structured data, JavaScript rendering, and IndexNow protocol. Use when user says \"technical SEO\", \"crawl issues\", \"robots…",
+      "family": "Claude SEO",
+      "source": "AgriciDaniel/claude-seo",
+      "install": "claude plugin marketplace add AgriciDaniel/claude-seo; claude plugin install claude-seo@agricidaniel-claude-seo",
+      "conf": "likely"
+    },
+    {
+      "name": "seo-unlighthouse",
+      "desc": "Multi-page Lighthouse audit via the MIT-licensed Unlighthouse CLI. Free-tier alternative to running PageSpeed against every URL on a site, no API quota burn, runs locally.",
+      "family": "Claude SEO",
+      "source": "AgriciDaniel/claude-seo",
+      "install": "claude plugin marketplace add AgriciDaniel/claude-seo; claude plugin install claude-seo@agricidaniel-claude-seo",
+      "conf": "likely"
+    },
+    {
+      "name": "setup-browser-cookies",
+      "desc": "Import cookies from your real Chromium browser into the headless browse session. (gstack)",
+      "family": "gstack",
+      "source": "garrytan/gstack",
+      "install": "git clone --depth 1 https://github.com/garrytan/gstack ~/.claude/skills/gstack; cd ~/.claude/skills/gstack; ./setup",
+      "conf": "verified"
+    },
+    {
+      "name": "setup-deploy",
+      "desc": "Configure deployment settings for /land-and-deploy.",
+      "family": "gstack",
+      "source": "garrytan/gstack",
+      "install": "git clone --depth 1 https://github.com/garrytan/gstack ~/.claude/skills/gstack; cd ~/.claude/skills/gstack; ./setup",
+      "conf": "verified"
+    },
+    {
+      "name": "setup-gbrain",
+      "desc": "Set up gbrain for this coding agent: install the CLI, initialize a local PGLite or Supabase brain, register MCP, capture per-remote trust policy. (gstack)",
+      "family": "gstack",
+      "source": "garrytan/gstack",
+      "install": "git clone --depth 1 https://github.com/garrytan/gstack ~/.claude/skills/gstack; cd ~/.claude/skills/gstack; ./setup",
+      "conf": "verified"
+    },
+    {
+      "name": "ship",
+      "desc": "Ship workflow: detect + merge base branch, run tests, review diff, bump VERSION, update CHANGELOG, commit, push, create PR. (gstack)",
+      "family": "gstack",
+      "source": "garrytan/gstack",
+      "install": "git clone --depth 1 https://github.com/garrytan/gstack ~/.claude/skills/gstack; cd ~/.claude/skills/gstack; ./setup",
+      "conf": "verified"
+    },
+    {
+      "name": "skill-builder",
+      "desc": "Create new Claude Code Skills with proper YAML frontmatter, progressive disclosure structure, and complete directory organization. Use when you need to build custom skills for specific workflows, generate skill templates, or understand the …",
+      "family": "Ruflo / claude-flow",
+      "source": "ruvnet/ruflo",
+      "install": "npm i -g ruflo; ruflo init",
+      "conf": "likely"
+    },
+    {
+      "name": "skill-creator",
+      "desc": "Create new skills, modify and improve existing skills, and measure skill performance. Use when users want to create a skill from scratch, edit, or optimize an existing skill, run evals to test a skill, benchmark skill performance with varia…",
+      "family": "Other (copied)",
+      "source": "not recorded",
+      "install": "node workspace.js restore",
+      "conf": "snapshot"
+    },
+    {
+      "name": "skillify",
+      "desc": "Codify the most recent successful /scrape flow into a permanent browser-skill on disk. (gstack)",
+      "family": "gstack",
+      "source": "garrytan/gstack",
+      "install": "git clone --depth 1 https://github.com/garrytan/gstack ~/.claude/skills/gstack; cd ~/.claude/skills/gstack; ./setup",
+      "conf": "verified"
+    },
+    {
+      "name": "slideshow",
+      "desc": "Author a HyperFrames slideshow — a presentation, pitch deck, or interactive deck with discrete slides, fragment reveals, branching, hotspot navigation, and built-in presenter mode with speaker notes; also converts an existing page into a de…",
+      "family": "HyperFrames",
+      "source": "heygen-com/hyperframes",
+      "install": "npx skills add heygen-com/hyperframes --skill slideshow -g",
+      "conf": "verified"
+    },
+    {
+      "name": "sparc-methodology",
+      "desc": "SPARC (Specification, Pseudocode, Architecture, Refinement, Completion) comprehensive development methodology with multi-agent orchestration",
+      "family": "Ruflo / claude-flow",
+      "source": "ruvnet/ruflo",
+      "install": "npm i -g ruflo; ruflo init",
+      "conf": "likely"
+    },
+    {
+      "name": "spec",
+      "desc": "Turn vague intent into a precise, executable spec in five phases. (gstack)",
+      "family": "gstack",
+      "source": "garrytan/gstack",
+      "install": "git clone --depth 1 https://github.com/garrytan/gstack ~/.claude/skills/gstack; cd ~/.claude/skills/gstack; ./setup",
+      "conf": "verified"
+    },
+    {
+      "name": "stitch-design-taste",
+      "desc": "Semantic Design System Skill for Google Stitch. Generates agent-friendly DESIGN.md files that enforce premium, anti-generic UI standards — strict typography, calibrated color, asymmetric layouts, perpetual micro-motion, and hardware-acceler…",
+      "family": "Taste skills",
+      "source": "Leonxlnx/taste-skill",
+      "install": "npx skills add Leonxlnx/taste-skill -g (upstream now ships one merged skill; exact copies come from this repo)",
+      "conf": "likely"
+    },
+    {
+      "name": "stream-chain",
+      "desc": "Stream-JSON chaining for multi-agent pipelines, data transformation, and sequential workflows",
+      "family": "Ruflo / claude-flow",
+      "source": "ruvnet/ruflo",
+      "install": "npm i -g ruflo; ruflo init",
+      "conf": "likely"
+    },
+    {
+      "name": "swarm-advanced",
+      "desc": "Advanced swarm orchestration patterns for research, development, testing, and complex distributed workflows",
+      "family": "Ruflo / claude-flow",
+      "source": "ruvnet/ruflo",
+      "install": "npm i -g ruflo; ruflo init",
+      "conf": "likely"
+    },
+    {
+      "name": "swarm-orchestration",
+      "desc": "Orchestrate multi-agent swarms with agentic-flow for parallel task execution, dynamic topology, and intelligent coordination. Use when scaling beyond single agents, implementing complex workflows, or building distributed AI systems.",
+      "family": "Ruflo / claude-flow",
+      "source": "ruvnet/ruflo",
+      "install": "npm i -g ruflo; ruflo init",
+      "conf": "likely"
+    },
+    {
+      "name": "sync-gbrain",
+      "desc": "Keep gbrain current with this repo's code and refresh agent search guidance in CLAUDE.md. Wraps the gstack-gbrain-sync orchestrator with state (gstack)",
+      "family": "gstack",
+      "source": "garrytan/gstack",
+      "install": "git clone --depth 1 https://github.com/garrytan/gstack ~/.claude/skills/gstack; cd ~/.claude/skills/gstack; ./setup",
+      "conf": "verified"
+    },
+    {
+      "name": "talking-head-recut",
+      "desc": "Package an existing talking-head / interview / podcast video with timed, designed GRAPHIC OVERLAY cards — kinetic titles, lower-thirds, data callouts, quotes, side panels, picture-in-picture — synced to the transcript, on a 16:9 / 9:16 / 4:…",
+      "family": "HyperFrames",
+      "source": "heygen-com/hyperframes",
+      "install": "npx skills add heygen-com/hyperframes --skill talking-head-recut -g",
+      "conf": "verified"
+    },
+    {
+      "name": "ui-ux-pro-max",
+      "desc": "UI/UX design intelligence for web and mobile. Includes 50+ styles, 161 color palettes, 57 font pairings, 161 product types, 99 UX guidelines, and 25 chart types across 10 stacks (React, Next.js, Vue, Svelte, SwiftUI, React Native, Flutter, …",
+      "family": "UI UX Pro Max",
+      "source": "nextlevelbuilder/ui-ux-pro-max-skill",
+      "install": "npx skills add nextlevelbuilder/ui-ux-pro-max-skill -g",
+      "conf": "verified"
+    },
+    {
+      "name": "unfreeze",
+      "desc": "Clear the freeze boundary set by /freeze, allowing edits to all directories again. (gstack)",
+      "family": "gstack",
+      "source": "garrytan/gstack",
+      "install": "git clone --depth 1 https://github.com/garrytan/gstack ~/.claude/skills/gstack; cd ~/.claude/skills/gstack; ./setup",
+      "conf": "verified"
+    },
+    {
+      "name": "v3-cli-modernization",
+      "desc": "CLI modernization and hooks system enhancement for claude-flow v3. Implements interactive prompts, command decomposition, enhanced hooks integration, and intelligent workflow automation.",
+      "family": "Ruflo / claude-flow",
+      "source": "ruvnet/ruflo",
+      "install": "npm i -g ruflo; ruflo init",
+      "conf": "likely"
+    },
+    {
+      "name": "v3-core-implementation",
+      "desc": "Core module implementation for claude-flow v3. Implements DDD domains, clean architecture patterns, dependency injection, and modular TypeScript codebase with comprehensive testing.",
+      "family": "Ruflo / claude-flow",
+      "source": "ruvnet/ruflo",
+      "install": "npm i -g ruflo; ruflo init",
+      "conf": "likely"
+    },
+    {
+      "name": "v3-ddd-architecture",
+      "desc": "Domain-Driven Design architecture for claude-flow v3. Implements modular, bounded context architecture with clean separation of concerns and microkernel pattern.",
+      "family": "Ruflo / claude-flow",
+      "source": "ruvnet/ruflo",
+      "install": "npm i -g ruflo; ruflo init",
+      "conf": "likely"
+    },
+    {
+      "name": "v3-integration-deep",
+      "desc": "Deep agentic-flow@alpha integration implementing ADR-001. Eliminates 10,000+ duplicate lines by building claude-flow as specialized extension rather than parallel implementation.",
+      "family": "Ruflo / claude-flow",
+      "source": "ruvnet/ruflo",
+      "install": "npm i -g ruflo; ruflo init",
+      "conf": "likely"
+    },
+    {
+      "name": "v3-mcp-optimization",
+      "desc": "MCP server optimization and transport layer enhancement for claude-flow v3. Implements connection pooling, load balancing, tool registry optimization, and performance monitoring for sub-100ms response times.",
+      "family": "Ruflo / claude-flow",
+      "source": "ruvnet/ruflo",
+      "install": "npm i -g ruflo; ruflo init",
+      "conf": "likely"
+    },
+    {
+      "name": "v3-memory-unification",
+      "desc": "Unify 6+ memory systems into AgentDB with HNSW indexing for 150x-12,500x search improvements. Implements ADR-006 (Unified Memory Service) and ADR-009 (Hybrid Memory Backend).",
+      "family": "Ruflo / claude-flow",
+      "source": "ruvnet/ruflo",
+      "install": "npm i -g ruflo; ruflo init",
+      "conf": "likely"
+    },
+    {
+      "name": "v3-performance-optimization",
+      "desc": "Achieve aggressive v3 performance targets: 2.49x-7.47x Flash Attention speedup, 150x-12,500x search improvements, 50-75% memory reduction. Comprehensive benchmarking and optimization suite.",
+      "family": "Ruflo / claude-flow",
+      "source": "ruvnet/ruflo",
+      "install": "npm i -g ruflo; ruflo init",
+      "conf": "likely"
+    },
+    {
+      "name": "v3-security-overhaul",
+      "desc": "Complete security architecture overhaul for claude-flow v3. Addresses critical CVEs (CVE-1, CVE-2, CVE-3) and implements secure-by-default patterns. Use for security-first v3 implementation.",
+      "family": "Ruflo / claude-flow",
+      "source": "ruvnet/ruflo",
+      "install": "npm i -g ruflo; ruflo init",
+      "conf": "likely"
+    },
+    {
+      "name": "v3-swarm-coordination",
+      "desc": "15-agent hierarchical mesh coordination for v3 implementation. Orchestrates parallel execution across security, core, and integration domains following 10 ADRs with 14-week timeline.",
+      "family": "Ruflo / claude-flow",
+      "source": "ruvnet/ruflo",
+      "install": "npm i -g ruflo; ruflo init",
+      "conf": "likely"
+    },
+    {
+      "name": "verification-quality",
+      "desc": "Comprehensive truth scoring, code quality verification, and automatic rollback system with 0.95 accuracy threshold for ensuring high-quality agent outputs and codebase reliability.",
+      "family": "Ruflo / claude-flow",
+      "source": "ruvnet/ruflo",
+      "install": "npm i -g ruflo; ruflo init",
+      "conf": "likely"
+    },
+    {
+      "name": "website-to-video",
+      "desc": "Capture a general website/URL and turn it into a HyperFrames video (site tour, showcase, or social clip from the site's own visuals). Uses headless Chrome screenshots + brand assets. Use when intent is general — portfolio/blog/landing-page …",
+      "family": "HyperFrames",
+      "source": "heygen-com/hyperframes",
+      "install": "npx skills add heygen-com/hyperframes -g",
+      "conf": "likely"
+    }
+  ],
+  "plugins": [
+    {
+      "id": "caveman@caveman",
+      "name": "caveman",
+      "market": "caveman",
+      "repo": "JuliusBrussee/caveman",
+      "desc": "Ultra-compressed communication mode. Cuts ~75% of tokens while keeping full technical accuracy by speaking like a caveman."
+    },
+    {
+      "id": "superpowers@superpowers-dev",
+      "name": "superpowers",
+      "market": "superpowers-dev",
+      "repo": "obra/superpowers",
+      "desc": "Core skills library for Claude Code: TDD, debugging, collaboration patterns, and proven techniques"
+    },
+    {
+      "id": "codex@openai-codex",
+      "name": "codex",
+      "market": "openai-codex",
+      "repo": "openai/codex-plugin-cc",
+      "desc": "Use Codex from Claude Code to review code or delegate tasks."
+    },
+    {
+      "id": "financial-analysis@claude-for-financial-services",
+      "name": "financial-analysis",
+      "market": "claude-for-financial-services",
+      "repo": "anthropics/financial-services",
+      "desc": "Core financial modeling and analysis tools: DCF, comps, LBO, 3-statement models, competitive analysis, and deck QC"
+    },
+    {
+      "id": "investment-banking@claude-for-financial-services",
+      "name": "investment-banking",
+      "market": "claude-for-financial-services",
+      "repo": "anthropics/financial-services",
+      "desc": "Investment banking productivity tools: client and market insights, deck creation, financial analysis, and transaction management"
+    },
+    {
+      "id": "equity-research@claude-for-financial-services",
+      "name": "equity-research",
+      "market": "claude-for-financial-services",
+      "repo": "anthropics/financial-services",
+      "desc": "Equity research tools: earnings analysis, initiating coverage reports, and research workflows"
+    },
+    {
+      "id": "private-equity@claude-for-financial-services",
+      "name": "private-equity",
+      "market": "claude-for-financial-services",
+      "repo": "anthropics/financial-services",
+      "desc": "Private equity deal sourcing and workflow tools: company discovery, CRM integration, and founder outreach"
+    },
+    {
+      "id": "wealth-management@claude-for-financial-services",
+      "name": "wealth-management",
+      "market": "claude-for-financial-services",
+      "repo": "anthropics/financial-services",
+      "desc": "Wealth management and financial advisory tools: client reviews, financial planning, portfolio analysis, and client reporting"
+    },
+    {
+      "id": "fund-admin@claude-for-financial-services",
+      "name": "fund-admin",
+      "market": "claude-for-financial-services",
+      "repo": "anthropics/financial-services",
+      "desc": "Fund administration and finance ops skills: GL reconciliation, break tracing, accruals, roll-forwards, variance commentary, NAV tie-out"
+    },
+    {
+      "id": "operations@claude-for-financial-services",
+      "name": "operations",
+      "market": "claude-for-financial-services",
+      "repo": "anthropics/financial-services",
+      "desc": "Operational workflows: KYC document parsing and rules-grid evaluation"
+    },
+    {
+      "id": "pitch-agent@claude-for-financial-services",
+      "name": "pitch-agent",
+      "market": "claude-for-financial-services",
+      "repo": "anthropics/financial-services",
+      "desc": "Comps, precedents, LBO to a branded pitch deck, end to end"
+    },
+    {
+      "id": "market-researcher@claude-for-financial-services",
+      "name": "market-researcher",
+      "market": "claude-for-financial-services",
+      "repo": "anthropics/financial-services",
+      "desc": "Sector or theme to industry overview, competitive landscape, peer comps, and ideas shortlist"
+    },
+    {
+      "id": "earnings-reviewer@claude-for-financial-services",
+      "name": "earnings-reviewer",
+      "market": "claude-for-financial-services",
+      "repo": "anthropics/financial-services",
+      "desc": "Earnings call and filings to model update to note draft"
+    },
+    {
+      "id": "meeting-prep-agent@claude-for-financial-services",
+      "name": "meeting-prep-agent",
+      "market": "claude-for-financial-services",
+      "repo": "anthropics/financial-services",
+      "desc": "Briefing pack before every client meeting"
+    },
+    {
+      "id": "model-builder@claude-for-financial-services",
+      "name": "model-builder",
+      "market": "claude-for-financial-services",
+      "repo": "anthropics/financial-services",
+      "desc": "DCF, LBO, 3-statement, comps - live in Excel"
+    },
+    {
+      "id": "gl-reconciler@claude-for-financial-services",
+      "name": "gl-reconciler",
+      "market": "claude-for-financial-services",
+      "repo": "anthropics/financial-services",
+      "desc": "Finds breaks, traces root cause, routes for sign-off"
+    },
+    {
+      "id": "kyc-screener@claude-for-financial-services",
+      "name": "kyc-screener",
+      "market": "claude-for-financial-services",
+      "repo": "anthropics/financial-services",
+      "desc": "Parses onboarding docs, runs the rules engine, flags gaps"
+    },
+    {
+      "id": "valuation-reviewer@claude-for-financial-services",
+      "name": "valuation-reviewer",
+      "market": "claude-for-financial-services",
+      "repo": "anthropics/financial-services",
+      "desc": "Ingests GP packages, runs valuation template, stages LP reporting"
+    },
+    {
+      "id": "month-end-closer@claude-for-financial-services",
+      "name": "month-end-closer",
+      "market": "claude-for-financial-services",
+      "repo": "anthropics/financial-services",
+      "desc": "Accruals, roll-forwards, variance commentary"
+    },
+    {
+      "id": "statement-auditor@claude-for-financial-services",
+      "name": "statement-auditor",
+      "market": "claude-for-financial-services",
+      "repo": "anthropics/financial-services",
+      "desc": "Audits pre-generated LP statements before distribution"
+    },
+    {
+      "id": "lseg@claude-for-financial-services",
+      "name": "lseg",
+      "market": "claude-for-financial-services",
+      "repo": "anthropics/financial-services",
+      "desc": "Price bonds, analyze yield curves, evaluate FX carry trades, value options, and build macro dashboards using LSEG financial data and analytics."
+    },
+    {
+      "id": "sp-global@claude-for-financial-services",
+      "name": "sp-global",
+      "market": "claude-for-financial-services",
+      "repo": "anthropics/financial-services",
+      "desc": "S&P Global - Financial data and analytics skills including company tearsheets, earnings previews, and transaction summaries"
+    },
+    {
+      "id": "claude-for-msft-365-install@claude-for-financial-services",
+      "name": "claude-for-msft-365-install",
+      "market": "claude-for-financial-services",
+      "repo": "anthropics/financial-services",
+      "desc": "Provision direct cloud access (Vertex AI, Bedrock, Azure AI Foundry, or LLM gateway) for the Claude Office add-in. Generates the customized add-in manifest, walks through Azure admin consent, and writes per-user config via Microsoft Graph e"
+    },
+    {
+      "id": "commercial-legal@claude-for-legal",
+      "name": "commercial-legal",
+      "market": "claude-for-legal",
+      "repo": "anthropics/claude-for-legal",
+      "desc": "Reviews vendor agreements, NDAs, and SaaS subscriptions against your sales-side or purchasing-side playbook, tracks renewals and cancel-by deadlines before they're missed, routes escalations to the right approver, and translates reviews int"
+    },
+    {
+      "id": "privacy-legal@claude-for-legal",
+      "name": "privacy-legal",
+      "market": "claude-for-legal",
+      "repo": "anthropics/claude-for-legal",
+      "desc": "Triages processing activities, generates PIAs, reviews DPAs as controller or processor, drafts DSAR responses within statutory timelines, and monitors policy drift against practice."
+    },
+    {
+      "id": "product-legal@claude-for-legal",
+      "name": "product-legal",
+      "market": "claude-for-legal",
+      "repo": "anthropics/claude-for-legal",
+      "desc": "Reviews product launches against your risk calibration, answers 'is this a problem?' questions in minutes, checks marketing copy for claims that need substantiation, and flags upcoming launches that need legal eyes before anyone asks."
+    },
+    {
+      "id": "corporate-legal@claude-for-legal",
+      "name": "corporate-legal",
+      "market": "claude-for-legal",
+      "repo": "anthropics/claude-for-legal",
+      "desc": "Runs M&A diligence at scale with cited tabular review, builds disclosure schedules and closing checklists, drafts board consents and minutes in house format, and tracks entity compliance deadlines across jurisdictions."
+    },
+    {
+      "id": "employment-legal@claude-for-legal",
+      "name": "employment-legal",
+      "market": "claude-for-legal",
+      "repo": "anthropics/claude-for-legal",
+      "desc": "Reviews hires and terminations for jurisdiction-specific risk flags, classifies workers against the controlling state test, tracks leave deadlines before they're missed, runs internal investigations, and drafts policies with state supplemen"
+    },
+    {
+      "id": "regulatory-legal@claude-for-legal",
+      "name": "regulatory-legal",
+      "market": "claude-for-legal",
+      "repo": "anthropics/claude-for-legal",
+      "desc": "Watches regulatory feeds, diffs new rules against your policy library, tracks comment deadlines and open gaps, and writes the digest your team reads Monday morning."
+    },
+    {
+      "id": "ai-governance-legal@claude-for-legal",
+      "name": "ai-governance-legal",
+      "market": "claude-for-legal",
+      "repo": "anthropics/claude-for-legal",
+      "desc": "Triages proposed AI use cases against your registry, runs impact assessments across the regimes in scope, reviews vendor AI terms for training-on-data and liability gaps, and keeps your AI policy current with practice."
+    },
+    {
+      "id": "litigation-legal@claude-for-legal",
+      "name": "litigation-legal",
+      "market": "claude-for-legal",
+      "repo": "anthropics/claude-for-legal",
+      "desc": "Manages the litigation portfolio — matters, deadlines, holds, demands, outside counsel — and does the work: claim charts (patent and civil), chronologies, depo prep, privilege logs, brief drafting. Adapts to how you work litigation: in-hous"
+    },
+    {
+      "id": "law-student@claude-for-legal",
+      "name": "law-student",
+      "market": "claude-for-legal",
+      "repo": "anthropics/claude-for-legal",
+      "desc": "Drills Socratically, briefs cases, builds outlines, runs bar prep sessions tuned to your jurisdiction, grades IRAC practice, and plans the study schedule — without ever writing it for you."
+    },
+    {
+      "id": "legal-clinic@claude-for-legal",
+      "name": "legal-clinic",
+      "market": "claude-for-legal",
+      "repo": "anthropics/claude-for-legal",
+      "desc": "Sets up the clinic, onboards students, runs structured intake, tracks deadlines with malpractice-aware caution, and hands off cases at semester end — built within ABA Formal Op. 512."
+    },
+    {
+      "id": "legal-builder-hub@claude-for-legal",
+      "name": "legal-builder-hub",
+      "market": "claude-for-legal",
+      "repo": "anthropics/claude-for-legal",
+      "desc": "Finds, evaluates, and installs community legal skills — with a security review gate before anything lands in your environment."
+    },
+    {
+      "id": "ip-legal@claude-for-legal",
+      "name": "ip-legal",
+      "market": "claude-for-legal",
+      "repo": "anthropics/claude-for-legal",
+      "desc": "Runs first-pass trademark clearance and freedom-to-operate triage, screens invention disclosures for initial patentability, drafts and triages cease-and-desist letters and DMCA takedowns (send and respond), checks open source compliance, re"
+    },
+    {
+      "id": "cocounsel-legal@claude-for-legal",
+      "name": "cocounsel-legal",
+      "market": "claude-for-legal",
+      "repo": "anthropics/claude-for-legal",
+      "desc": "CoCounsel Legal delivers comprehensive Westlaw Deep Research reports with inline, linked citations to Westlaw and Practical Law sources."
+    },
+    {
+      "id": "marketing-skills@marketingskills",
+      "name": "marketing-skills",
+      "market": "marketingskills",
+      "repo": "coreyhaines31/marketingskills",
+      "desc": "Marketing skills for AI agents — conversion optimization, copywriting, SEO, paid ads, ad creative, and growth"
+    },
+    {
+      "id": "social-media-skills@social-media-skills",
+      "name": "social-media-skills",
+      "market": "social-media-skills",
+      "repo": "charlie947/social-media-skills",
+      "desc": ""
+    },
+    {
+      "id": "document-skills@anthropic-agent-skills",
+      "name": "document-skills",
+      "market": "anthropic-agent-skills",
+      "repo": "anthropics/skills",
+      "desc": ""
+    },
+    {
+      "id": "example-skills@anthropic-agent-skills",
+      "name": "example-skills",
+      "market": "anthropic-agent-skills",
+      "repo": "anthropics/skills",
+      "desc": ""
+    },
+    {
+      "id": "claude-api@anthropic-agent-skills",
+      "name": "claude-api",
+      "market": "anthropic-agent-skills",
+      "repo": "anthropics/skills",
+      "desc": ""
+    },
+    {
+      "id": "claude-seo@agricidaniel-claude-seo",
+      "name": "claude-seo",
+      "market": "agricidaniel-claude-seo",
+      "repo": "AgriciDaniel/claude-seo",
+      "desc": "Comprehensive SEO analysis plugin for Claude Code. 25 sub-skills (21 core + 1 orchestrator + 1 framework + 2 extension mirrors) and 18 sub-agents cover technical SEO, content quality, schema, sitemaps, Core Web Vitals, local SEO, backlinks,"
+    },
+    {
+      "id": "repomix-mcp@repomix",
+      "name": "repomix-mcp",
+      "market": "repomix",
+      "repo": "yamadashy/repomix",
+      "desc": "Repomix MCP server for AI-powered codebase analysis. Pack local/remote repositories, search outputs, and read files with built-in security scanning. Foundation plugin that enables all Repomix features in Claude Code."
+    },
+    {
+      "id": "repomix-commands@repomix",
+      "name": "repomix-commands",
+      "market": "repomix",
+      "repo": "yamadashy/repomix",
+      "desc": "Slash commands for quick Repomix operations. Pack local and remote repositories with simple commands like /pack-local and /pack-remote."
+    },
+    {
+      "id": "repomix-explorer@repomix",
+      "name": "repomix-explorer",
+      "market": "repomix",
+      "repo": "yamadashy/repomix",
+      "desc": "AI-powered repository analysis agent using Repomix CLI. Analyzes local and remote repositories intelligently by running repomix commands, then reading and searching the generated output files to answer questions about code structure, patter"
+    },
+    {
+      "id": "c-level-skills@claude-code-skills",
+      "name": "c-level-skills",
+      "market": "claude-code-skills",
+      "repo": "alirezarezvani/claude-skills",
+      "desc": "33 C-level advisory skills + c-level-agents plugin layer (13 cs-* persona agents + 21 /cs:* slash commands). Complete virtual board of directors with CEO, CTO, COO, CPO, CMO, CFO, CRO, CISO, CHRO advisors plus General Counsel, Chief Data Of"
+    },
+    {
+      "id": "c-level-agents@claude-code-skills",
+      "name": "c-level-agents",
+      "market": "claude-code-skills",
+      "repo": "alirezarezvani/claude-skills",
+      "desc": "Founder-mode executive team plugin: 13 cs-* C-suite agents (CFO, CMO, CRO, CPO, COO, CHRO, CISO, Chief of Staff, General Counsel, Chief Data Officer, Chief AI Officer, Chief Customer Officer, VP of Engineering) plus 21 /cs:* slash commands "
+    },
+    {
+      "id": "general-counsel-advisor@claude-code-skills",
+      "name": "general-counsel-advisor",
+      "market": "claude-code-skills",
+      "repo": "alirezarezvani/claude-skills",
+      "desc": "General Counsel advisory for startups: contract risk scanner (12 founder-killer patterns: auto-renew traps, uncapped indemnity, vague IP, MFN pricing, missing DPA, one-sided venue, broad non-solicit, perpetual license-back, etc.) and term s"
+    },
+    {
+      "id": "chief-data-officer-advisor@claude-code-skills",
+      "name": "chief-data-officer-advisor",
+      "market": "claude-code-skills",
+      "repo": "alirezarezvani/claude-skills",
+      "desc": "Chief Data Officer advisory: AI training data audit (origin x class x use-case matrix with GDPR Art. 6 + EU AI Act citations -> GO/MITIGATE/NO-GO per source), data product strategy picker (warehouse vs lakehouse vs mesh + 6-layer build-vs-b"
+    },
+    {
+      "id": "vpe-advisor@claude-code-skills",
+      "name": "vpe-advisor",
+      "market": "claude-code-skills",
+      "repo": "alirezarezvani/claude-skills",
+      "desc": "VP of Engineering advisory: delivery throughput analyzer (DORA 4 metrics + cycle-time bottleneck identification), eng hiring funnel calculator (7-stage conversion + pipeline gap + weakest-stage fixes), eng team structure designer (squad/tri"
+    },
+    {
+      "id": "chief-customer-officer-advisor@claude-code-skills",
+      "name": "chief-customer-officer-advisor",
+      "market": "claude-code-skills",
+      "repo": "alirezarezvani/claude-skills",
+      "desc": "Chief Customer Officer advisory for startups: retention decomposition analyzer (honest GRR vs NRR + 7-category churn taxonomy), customer segmentation designer (4-tier framework + ICP fit scoring + kill list), CS coverage calculator (pooled "
+    },
+    {
+      "id": "chief-ai-officer-advisor@claude-code-skills",
+      "name": "chief-ai-officer-advisor",
+      "market": "claude-code-skills",
+      "repo": "alirezarezvani/claude-skills",
+      "desc": "Chief AI Officer advisory: model build-vs-buy calculator (API vs fine-tune vs build with 3-year TCO across 6 paths + breakeven balancing economics with practical feasibility), AI risk classifier (EU AI Act tier with 7 Article citations + US"
+    },
+    {
+      "id": "engineering-advanced-skills@claude-code-skills",
+      "name": "engineering-advanced-skills",
+      "market": "claude-code-skills",
+      "repo": "alirezarezvani/claude-skills",
+      "desc": "37 advanced engineering skills: agent designer, agent workflow designer, RAG architect, database designer + schema designer + SQL assistant, migration architect, observability designer, dependency auditor, changelog generator (with semantic"
+    },
+    {
+      "id": "engineering-skills@claude-code-skills",
+      "name": "engineering-skills",
+      "market": "claude-code-skills",
+      "repo": "alirezarezvani/claude-skills",
+      "desc": "32 production-ready engineering skills: architecture, frontend, backend, fullstack, QA, DevOps, security, AI/ML, data engineering, Playwright, self-improving agent, security suite (adversarial-reviewer, ai-security, cloud-security, incident"
+    },
+    {
+      "id": "ra-qm-skills@claude-code-skills",
+      "name": "ra-qm-skills",
+      "market": "claude-code-skills",
+      "repo": "alirezarezvani/claude-skills",
+      "desc": "14 regulatory affairs & quality management skills for HealthTech/MedTech: ISO 13485 QMS, MDR 2017/745, FDA 510(k)/PMA, GDPR/DSGVO, ISO 27001 ISMS, SOC 2, CAPA management, risk management, clinical evaluation, and more. Agent skill and plugi"
+    },
+    {
+      "id": "product-skills@claude-code-skills",
+      "name": "product-skills",
+      "market": "claude-code-skills",
+      "repo": "alirezarezvani/claude-skills",
+      "desc": "13 production-ready product skills: product manager toolkit (RICE, PRDs), agile product owner, product strategist, UX researcher, UI design system, competitive teardown, landing page generator, SaaS scaffolder, product analytics, experiment"
+    },
+    {
+      "id": "pm-skills@claude-code-skills",
+      "name": "pm-skills",
+      "market": "claude-code-skills",
+      "repo": "alirezarezvani/claude-skills",
+      "desc": "9 project management skills: senior PM, scrum master, Jira expert, Confluence expert, Atlassian admin, template scaffolder, and Atlassian MCP-bundled (Remote SSE) integration. Agent skill and plugin for Claude Code, Codex, Gemini CLI, Curso"
+    },
+    {
+      "id": "business-growth-skills@claude-code-skills",
+      "name": "business-growth-skills",
+      "market": "claude-code-skills",
+      "repo": "alirezarezvani/claude-skills",
+      "desc": "4 business & growth skills plus a router: customer success manager (health scoring, churn), sales engineer (RFP analysis, PoC planning), revenue operations (pipeline, forecast accuracy, GTM), and contract & proposal writer. Agent skill and "
+    },
+    {
+      "id": "finance-skills@claude-code-skills",
+      "name": "finance-skills",
+      "market": "claude-code-skills",
+      "repo": "alirezarezvani/claude-skills",
+      "desc": "2 finance skills plus a router: financial analyst (ratio analysis, DCF valuation, budgeting, forecasting) and SaaS metrics coach (ARR, MRR, churn, CAC, LTV, NRR, Quick Ratio, 12-month projections). 7 Python automation tools. The business-in"
+    },
+    {
+      "id": "pw@claude-code-skills",
+      "name": "pw",
+      "market": "claude-code-skills",
+      "repo": "alirezarezvani/claude-skills",
+      "desc": "Production-grade Playwright testing toolkit. Generate tests from specs, fix flaky failures, migrate from Cypress/Selenium, sync with TestRail, run on BrowserStack. 55+ ready-to-use templates, 3 specialized agents, smart reporting that plugs"
+    },
+    {
+      "id": "self-improving-agent@claude-code-skills",
+      "name": "self-improving-agent",
+      "market": "claude-code-skills",
+      "repo": "alirezarezvani/claude-skills",
+      "desc": "Self-Improving Agent: curate auto-memory, promote learnings to CLAUDE.md and rules, extract proven patterns into reusable skills. Provides /si:review, /si:promote, /si:extract, /si:status, and /si:remember slash commands."
+    },
+    {
+      "id": "autoresearch-agent@claude-code-skills",
+      "name": "autoresearch-agent",
+      "market": "claude-code-skills",
+      "repo": "alirezarezvani/claude-skills",
+      "desc": "Autonomous experiment loop that optimizes any file by a measurable metric. 5 slash commands, 8 evaluators, configurable loop intervals (10min to monthly)."
+    },
+    {
+      "id": "google-workspace-cli@claude-code-skills",
+      "name": "google-workspace-cli",
+      "market": "claude-code-skills",
+      "repo": "alirezarezvani/claude-skills",
+      "desc": "Google Workspace administration via the gws CLI (github.com/googleworkspace/cli, install: npm i -g @googleworkspace/cli). Authenticate and automate Gmail, Drive, Sheets, Calendar, Docs, Chat, and Tasks. 5 Python tools, 3 reference guides, a"
+    },
+    {
+      "id": "code-to-prd@claude-code-skills",
+      "name": "code-to-prd",
+      "market": "claude-code-skills",
+      "repo": "alirezarezvani/claude-skills",
+      "desc": "Reverse-engineer any codebase into a complete Product Requirements Document (PRD). Analyzes routes, components, models, APIs, and interactions for frontend (React, Vue, Angular, Next.js), backend (NestJS, Django, Express, FastAPI), and full"
+    },
+    {
+      "id": "agenthub@claude-code-skills",
+      "name": "agenthub",
+      "market": "claude-code-skills",
+      "repo": "alirezarezvani/claude-skills",
+      "desc": "Multi-agent collaboration plugin for Claude Code. Spawn N parallel subagents that compete on code optimization, content drafts, research approaches, or any problem that benefits from diverse solutions. Evaluate by metric or LLM judge, merge"
+    },
+    {
+      "id": "a11y-audit@claude-code-skills",
+      "name": "a11y-audit",
+      "market": "claude-code-skills",
+      "repo": "alirezarezvani/claude-skills",
+      "desc": "WCAG 2.2 accessibility audit and fix skill for React, Next.js, Vue, Angular, Svelte, and HTML. Static scanner detecting 20+ violation types, contrast checker with suggest mode, framework-specific fix patterns, CI-friendly exit codes."
+    },
+    {
+      "id": "executive-mentor@claude-code-skills",
+      "name": "executive-mentor",
+      "market": "claude-code-skills",
+      "repo": "alirezarezvani/claude-skills",
+      "desc": "Adversarial thinking partner for founders and executives. Stress-tests plans, prepares for board meetings, navigates hard decisions, and forces honest post-mortems."
+    },
+    {
+      "id": "docker-development@claude-code-skills",
+      "name": "docker-development",
+      "market": "claude-code-skills",
+      "repo": "alirezarezvani/claude-skills",
+      "desc": "Docker and container development agent skill and plugin for Dockerfile optimization, docker-compose orchestration, multi-stage builds, and container security hardening. Covers build performance, layer caching, and production-ready container"
+    },
+    {
+      "id": "helm-chart-builder@claude-code-skills",
+      "name": "helm-chart-builder",
+      "market": "claude-code-skills",
+      "repo": "alirezarezvani/claude-skills",
+      "desc": "Helm chart development agent skill and plugin for Claude Code, Codex, Gemini CLI, Cursor, OpenClaw — chart scaffolding, values design, template patterns, dependency management, security hardening, and chart testing."
+    },
+    {
+      "id": "terraform-patterns@claude-code-skills",
+      "name": "terraform-patterns",
+      "market": "claude-code-skills",
+      "repo": "alirezarezvani/claude-skills",
+      "desc": "Terraform infrastructure-as-code agent skill and plugin for module design patterns, state management strategies, provider configuration, security hardening, and CI/CD plan/apply workflows. Covers mono-repo vs multi-repo, workspaces, policy-"
+    },
+    {
+      "id": "research-summarizer@claude-code-skills",
+      "name": "research-summarizer",
+      "market": "claude-code-skills",
+      "repo": "alirezarezvani/claude-skills",
+      "desc": "Structured research summarization agent skill and plugin for Claude Code, Codex, and Gemini CLI. Summarize academic papers, compare web articles, extract citations, and produce actionable research briefs."
+    },
+    {
+      "id": "code-tour@claude-code-skills",
+      "name": "code-tour",
+      "market": "claude-code-skills",
+      "repo": "alirezarezvani/claude-skills",
+      "desc": "Create CodeTour .tour files — persona-targeted, step-by-step walkthroughs that link to real files and line numbers. Supports 10 developer personas (vibecoder, new joiner, architect, security reviewer, etc.), all CodeTour step types, and SMI"
+    },
+    {
+      "id": "demo-video@claude-code-skills",
+      "name": "demo-video",
+      "market": "claude-code-skills",
+      "repo": "alirezarezvani/claude-skills",
+      "desc": "Create polished demo videos from screenshots and scene descriptions. Orchestrates playwright, ffmpeg, and edge-tts to produce product walkthroughs, feature showcases, and marketing teasers with story structure, scene design system, and narr"
+    },
+    {
+      "id": "data-quality-auditor@claude-code-skills",
+      "name": "data-quality-auditor",
+      "market": "claude-code-skills",
+      "repo": "alirezarezvani/claude-skills",
+      "desc": "Audit datasets for completeness, consistency, accuracy, and validity. 3 stdlib-only Python tools: data profiler with DQS scoring, missing value analyzer with MCAR/MAR/MNAR classification, and multi-method outlier detector."
+    },
+    {
+      "id": "statistical-analyst@claude-code-skills",
+      "name": "statistical-analyst",
+      "market": "claude-code-skills",
+      "repo": "alirezarezvani/claude-skills",
+      "desc": "Hypothesis testing, A/B experiment analysis, sample size calculation, and confidence intervals. 3 stdlib-only Python tools with Z-test, t-test, chi-square, effect sizes, power analysis, and Wilson score intervals."
+    },
+    {
+      "id": "apple-hig-expert@claude-code-skills",
+      "name": "apple-hig-expert",
+      "market": "claude-code-skills",
+      "repo": "alirezarezvani/claude-skills",
+      "desc": "Master Apple's Human Interface Guidelines (HIG) with focus on 2026 Liquid Glass aesthetics. Design and audit iOS, macOS, and visionOS apps for full compliance and premium feel. Includes hig_checker Python tool for tap targets, contrast, and"
+    },
+    {
+      "id": "llm-wiki@claude-code-skills",
+      "name": "llm-wiki",
+      "market": "claude-code-skills",
+      "repo": "alirezarezvani/claude-skills",
+      "desc": "Turn Claude Code + Obsidian into a second brain. The LLM incrementally ingests sources into a persistent, interlinked markdown wiki — building entity/concept/source pages, flagging contradictions, maintaining an index and log. Knowledge com"
+    },
+    {
+      "id": "karpathy-coder@claude-code-skills",
+      "name": "karpathy-coder",
+      "market": "claude-code-skills",
+      "repo": "alirezarezvani/claude-skills",
+      "desc": "Active coding discipline enforcer based on Karpathy's 4 principles: surface assumptions, keep it simple, make surgical changes, define verifiable goals. Ships 4 Python tools (complexity_checker, diff_surgeon, assumption_linter, goal_verifie"
+    },
+    {
+      "id": "feature-flags-architect@claude-code-skills",
+      "name": "feature-flags-architect",
+      "market": "claude-code-skills",
+      "repo": "alirezarezvani/claude-skills",
+      "desc": "End-to-end feature-flag discipline: classify, ship, ramp, retire. Detects stale flags as debt, generates phased rollout plans (ring/linear/log/cohort), and audits every flag for a documented kill switch. 3 stdlib Python tools, 4 references "
+    },
+    {
+      "id": "kubernetes-operator@claude-code-skills",
+      "name": "kubernetes-operator",
+      "market": "claude-code-skills",
+      "repo": "alirezarezvani/claude-skills",
+      "desc": "End-to-end Kubernetes Operator discipline: CRD design, reconcile-loop patterns, and OperatorHub Capability Levels. Ships CRD validator, reconcile-loop linter, and capability auditor (3 stdlib Python tools), 4 references on the operator patt"
+    },
+    {
+      "id": "chaos-engineering@claude-code-skills",
+      "name": "chaos-engineering",
+      "market": "claude-code-skills",
+      "repo": "alirezarezvani/claude-skills",
+      "desc": "End-to-end chaos engineering discipline: design experiments with hypothesis + steady-state metric + blast radius + abort criteria, calculate risk score against error budget, and generate blameless postmortems. 3 stdlib Python tools (experim"
+    },
+    {
+      "id": "slo-architect@claude-code-skills",
+      "name": "slo-architect",
+      "market": "claude-code-skills",
+      "repo": "alirezarezvani/claude-skills",
+      "desc": "End-to-end SLO/SLI/error-budget discipline per Google SRE Workbook. Ships SLO designer (refuses to render without required fields), error-budget calculator with multi-window burn-rate alert thresholds (PromQL-shaped), and SLO reviewer that "
+    },
+    {
+      "id": "write-a-skill@claude-code-skills",
+      "name": "write-a-skill",
+      "market": "claude-code-skills",
+      "repo": "alirezarezvani/claude-skills",
+      "desc": "Skill-author skill: create new agent skills with proper structure, progressive disclosure, and bundled resources. Enhanced from Matt Pocock's MIT-licensed write-a-skill (https://github.com/mattpocock/skills) with: (1) stdlib Python validati"
+    },
+    {
+      "id": "workflow-builder@claude-code-skills",
+      "name": "workflow-builder",
+      "market": "claude-code-skills",
+      "repo": "alirezarezvani/claude-skills",
+      "desc": "Workflow-builder skill: design and write deterministic multi-agent workflow scripts (.js files in .claude/workflows/) for Claude Code's Workflow tool (CLAUDE_CODE_WORKFLOWS=1, /workflows). Every session opens with an intake question set; wh"
+    },
+    {
+      "id": "grill-me@claude-code-skills",
+      "name": "grill-me",
+      "market": "claude-code-skills",
+      "repo": "alirezarezvani/claude-skills",
+      "desc": "Relentless plan-and-design interrogator. Walks the decision tree of a plan one branch at a time, asking forcing questions sequentially with recommended answers. Explores codebase to resolve answers where possible. Enhanced from Matt Pocock'"
+    },
+    {
+      "id": "handoff-engineering@claude-code-skills",
+      "name": "handoff-engineering",
+      "market": "claude-code-skills",
+      "repo": "alirezarezvani/claude-skills",
+      "desc": "Conversation-handoff document generator. Compacts the current conversation into a markdown handoff so a fresh agent can continue. References existing artifacts (PRDs, plans, ADRs, issues, commits) by path/URL — does not duplicate them. Enha"
+    },
+    {
+      "id": "agile-product-owner@claude-code-skills",
+      "name": "agile-product-owner",
+      "market": "claude-code-skills",
+      "repo": "alirezarezvani/claude-skills",
+      "desc": "Agile product ownership for backlog management and sprint execution. User story generation (INVEST-compliant), acceptance criteria patterns (Given/When/Then, rule-based, checklist), epic breakdown with 5 split techniques, sprint planning wi"
+    },
+    {
+      "id": "capture-skill@claude-code-skills",
+      "name": "capture-skill",
+      "market": "claude-code-skills",
+      "repo": "alirezarezvani/claude-skills",
+      "desc": "Brain-dump organizer. Ingests an unstructured stream of mixed thoughts, tasks, ideas and transforms it into a clean four-section actionable system (Projects/Ideas, Tasks, Connections, How I Can Help) with zero information loss. Fast-to-acti"
+    },
+    {
+      "id": "email-pair@claude-code-skills",
+      "name": "email-pair",
+      "market": "claude-code-skills",
+      "repo": "alirezarezvani/claude-skills",
+      "desc": "Email triage system — paired skills (inbox-setup + inbox-triage) for personalized recurring email triage. inbox-setup runs once via interactive interview to build a knowledge base of 7 files (taxonomy, patterns, evaluation-framework, rate-c"
+    },
+    {
+      "id": "reflect-skill@claude-code-skills",
+      "name": "reflect-skill",
+      "market": "claude-code-skills",
+      "repo": "alirezarezvani/claude-skills",
+      "desc": "Mid-conversation reflection skill that pauses execution and zooms out from detail-mode to honestly reassess direction, assumptions, and bias. Use when the user says 'reflect', 'take a step back', 'step back', 'zoom out', 'are we missing som"
+    },
+    {
+      "id": "handoff-productivity@claude-code-skills",
+      "name": "handoff-productivity",
+      "market": "claude-code-skills",
+      "repo": "alirezarezvani/claude-skills",
+      "desc": "Compact the current conversation into a handoff document for another agent to pick up. Save to a user-configured location (OS temp, home folder, or per-project .handoff/), redact secrets before write, suggest skills for the next session, an"
+    },
+    {
+      "id": "andreessen@claude-code-skills",
+      "name": "andreessen",
+      "market": "claude-code-skills",
+      "repo": "alirezarezvani/claude-skills",
+      "desc": "Marc Andreessen-mode decision and productivity skill. A blunt, market-first operator that pressure-tests ventures, ideas, features, and career bets through Andreessen's documented frameworks (market > team > product; product/market fit is t"
+    },
+    {
+      "id": "landing@claude-code-skills",
+      "name": "landing",
+      "market": "claude-code-skills",
+      "repo": "alirezarezvani/claude-skills",
+      "desc": "Premium single-file HTML landing page generator with GSAP 3D animations, scroll-triggered effects, and mouse-parallax depth. Forcing 3-4 question grill-me intake (product+pitch, audience register, brand overrides, tone) locks down positioni"
+    },
+    {
+      "id": "pulse@claude-code-skills",
+      "name": "pulse",
+      "market": "claude-code-skills",
+      "repo": "alirezarezvani/claude-skills",
+      "desc": "Multi-source recency research skill. Takes the pulse of any topic across Reddit, Hacker News, the open web, and (optionally) X/Twitter within a configurable recent window (default 30 days). Forcing 2–4 question grill-me intake clarifies top"
+    },
+    {
+      "id": "litreview@claude-code-skills",
+      "name": "litreview",
+      "market": "claude-code-skills",
+      "repo": "alirezarezvani/claude-skills",
+      "desc": "Academic literature orientation skill. Turns a research question into a strategically planned mini literature review, delivered as a researcher-friendly Word document (.docx). Grill-me intake (research question + framework hint + tentative "
+    },
+    {
+      "id": "grants@claude-code-skills",
+      "name": "grants",
+      "market": "claude-code-skills",
+      "repo": "alirezarezvani/claude-skills",
+      "desc": "NIH grant research skill for clinical researchers. Grill-me intake (research idea + career stage + preliminary data + environment + submission posture + known institute targets) locks down the funding strategy before any search runs. Runs a"
+    },
+    {
+      "id": "dossier@claude-code-skills",
+      "name": "dossier",
+      "market": "claude-code-skills",
+      "repo": "alirezarezvani/claude-skills",
+      "desc": "Decision-grade entity research skill — produces a hypothesis-tested dossier on a specific company, person, nonprofit, or government org, not a generic profile. Forcing intake makes the user state their hypothesis upfront (what they already "
+    },
+    {
+      "id": "patent@claude-code-skills",
+      "name": "patent",
+      "market": "claude-code-skills",
+      "repo": "alirezarezvani/claude-skills",
+      "desc": "Patent prior-art and landscape intelligence skill — not generic patent help. Commits to one of five sub-use-cases via forcing intake (novelty search / freedom-to-operate / competitive landscape / acquisition diligence / litigation prior-art"
+    },
+    {
+      "id": "syllabus@claude-code-skills",
+      "name": "syllabus",
+      "market": "claude-code-skills",
+      "repo": "alirezarezvani/claude-skills",
+      "desc": "Generates a curated supplementary reading list from any course syllabus using Consensus academic search. Grill-me intake (syllabus input format + course audience + year range) plus a grouping forcing-options checkpoint before any search run"
+    },
+    {
+      "id": "notebooklm@claude-code-skills",
+      "name": "notebooklm",
+      "market": "claude-code-skills",
+      "repo": "alirezarezvani/claude-skills",
+      "desc": "Browser automation skill for controlling Google's NotebookLM. Use when the user wants anything done in NotebookLM (e.g., 'open NotebookLM', 'check my [name] notebook', 'ask my notebook about X', 'add [source] to NotebookLM', 'generate a Vid"
+    },
+    {
+      "id": "research-orchestrator@claude-code-skills",
+      "name": "research-orchestrator",
+      "market": "claude-code-skills",
+      "repo": "alirezarezvani/claude-skills",
+      "desc": "Default entry point for any research request — a hybrid router that classifies the question deterministically and either delegates to a specialist research skill (pulse for trends/sentiment, grants for NIH funding, litreview for academic li"
+    },
+    {
+      "id": "aeo@claude-code-skills",
+      "name": "aeo",
+      "market": "claude-code-skills",
+      "repo": "alirezarezvani/claude-skills",
+      "desc": "Answer Engine Optimization (AEO) skill — optimize content to be cited by AI language models (ChatGPT, Perplexity, Claude, Gemini, Mistral) as authoritative sources. Distinct from SEO (which optimizes for search rankings), AEO optimizes for "
+    },
+    {
+      "id": "security-guidance@claude-code-skills",
+      "name": "security-guidance",
+      "market": "claude-code-skills",
+      "repo": "alirezarezvani/claude-skills",
+      "desc": "PreToolUse security reminder hook for Claude Code. Catches 12 common security anti-patterns in Edit/Write/MultiEdit operations BEFORE they happen — command injection (exec, os.system, subprocess shell=True), XSS (innerHTML, dangerouslySetIn"
+    },
+    {
+      "id": "business-operations-skills@claude-code-skills",
+      "name": "business-operations-skills",
+      "market": "claude-code-skills",
+      "repo": "alirezarezvani/claude-skills",
+      "desc": "6 BizOps skills + 1 orchestrator: process-mapper (BPMN + bottleneck + cycle-time), vendor-management (SLA + risk + scorecard), capacity-planner (Erlang-C queueing math for ops teams), internal-comms (ADKAR + Kotter 8-step change comms), kno"
+    },
+    {
+      "id": "commercial-skills@claude-code-skills",
+      "name": "commercial-skills",
+      "market": "claude-code-skills",
+      "repo": "alirezarezvani/claude-skills",
+      "desc": "7 Commercial skills + 1 orchestrator: pricing-strategist (Van Westendorp WTP + packaging + model picker), deal-desk (margin + discount routing + redline scoring), partnerships-architect (5-tier classifier + joint GTM + revshare modeler), ch"
+    },
+    {
+      "id": "universal-scraping-architect@claude-code-skills",
+      "name": "universal-scraping-architect",
+      "market": "claude-code-skills",
+      "repo": "alirezarezvani/claude-skills",
+      "desc": "A universal scraping skill with intelligent routing, token budget tracking, and quota awareness. Supports Firecrawl and local Python extraction (firecrawl, pandas, requests, beautifulsoup4). Free-tier compatible, BYOK."
+    },
+    {
+      "id": "research-ops-skills@claude-code-skills",
+      "name": "research-ops-skills",
+      "market": "claude-code-skills",
+      "repo": "alirezarezvani/claude-skills",
+      "desc": "4 Research-Operations skills + 1 orchestrator: clinical-research (study design: protocol synopsis, endpoint selection, sample-size/power, phase-gating, feasibility), research-finance (R&D program budgeting, burn/runway, F&A indirect-rate mo"
+    },
+    {
+      "id": "markdown-html-skills@claude-code-skills",
+      "name": "markdown-html-skills",
+      "market": "claude-code-skills",
+      "repo": "alirezarezvani/claude-skills",
+      "desc": "Convert long markdown files into world-class, single-file, lightly-interactive HTML. v2.10.3 completes the markdown-html/ domain — adds md-slides (slide-deck converter: arrow-key / Space / PgDn / Home/End / P keyboard navigation + presenter"
+    },
+    {
+      "id": "youtube-full@claude-code-skills",
+      "name": "youtube-full",
+      "market": "claude-code-skills",
+      "repo": "alirezarezvani/claude-skills",
+      "desc": "YouTube transcripts, video search, channel browsing, playlist extraction, and new-upload monitoring via TranscriptAPI. Covers all YouTube data workflows: transcript extraction with timestamps, in-channel search, and content monitoring. BYOK"
+    },
+    {
+      "id": "compliance-os@claude-code-skills",
+      "name": "compliance-os",
+      "market": "claude-code-skills",
+      "repo": "alirezarezvani/claude-skills",
+      "desc": "Compliance OS — meta-orchestrator for multi-framework compliance programs. Configure-then-operate four stdlib Python tools: framework_selector.py (input: company profile across industry/geography/AI/medical/financial/headcount; output: appl"
+    },
+    {
+      "id": "snowflake-development@claude-code-skills",
+      "name": "snowflake-development",
+      "market": "claude-code-skills",
+      "repo": "alirezarezvani/claude-skills",
+      "desc": "Snowflake SQL, data pipelines (Dynamic Tables, Streams+Tasks), Cortex AI functions, Snowpark Python, and dbt integration. Includes query helper script, 3 reference guides, and troubleshooting."
+    },
+    {
+      "id": "behuman@claude-code-skills",
+      "name": "behuman",
+      "market": "claude-code-skills",
+      "repo": "alirezarezvani/claude-skills",
+      "desc": "Self-Mirror consciousness loop for human-like AI responses. Adds inner dialogue (Self → Mirror → Conscious Response) to make AI output feel authentic, not robotic. Zero dependencies — pure prompt technique."
+    },
+    {
+      "id": "claude-coach@claude-code-skills",
+      "name": "claude-coach",
+      "market": "claude-code-skills",
+      "repo": "alirezarezvani/claude-skills",
+      "desc": "Personal Claude power-user coach. On first activation, delivers a personalized, ranked cheat-code glossary filtered to the user's use cases. On every subsequent turn, scans for missed power-user opportunities and surfaces at most ONE ⚡ tip "
+    },
+    {
+      "id": "grill-with-docs@claude-code-skills",
+      "name": "grill-with-docs",
+      "market": "claude-code-skills",
+      "repo": "alirezarezvani/claude-skills",
+      "desc": "Docs-anchored grilling session — interrogates a plan against the project's existing language (CONTEXT.md) and recorded decisions (docs/adr/), updating those files inline as terminology and decisions crystallise. Derived from Matt Pocock's M"
+    },
+    {
+      "id": "llm-cost-optimizer@claude-code-skills",
+      "name": "llm-cost-optimizer",
+      "market": "claude-code-skills",
+      "repo": "alirezarezvani/claude-skills",
+      "desc": "Use when you need to reduce LLM API spend, control token usage, route between models by cost/quality, implement prompt caching, or build cost observability for AI features. Triggers: 'my AI costs are "
+    },
+    {
+      "id": "prompt-governance@claude-code-skills",
+      "name": "prompt-governance",
+      "market": "claude-code-skills",
+      "repo": "alirezarezvani/claude-skills",
+      "desc": "Use when managing prompts in production at scale: versioning prompts, running A/B tests on prompts, building prompt registries, preventing prompt regressions, or creating eval pipelines for production"
+    },
+    {
+      "id": "business-investment-advisor@claude-code-skills",
+      "name": "business-investment-advisor",
+      "market": "claude-code-skills",
+      "repo": "alirezarezvani/claude-skills",
+      "desc": "Business investment analysis and capital allocation advisor. Use when evaluating whether to invest in equipment, real estate, a new business, hiring, technology, or any capital expenditure. Also use f"
+    },
+    {
+      "id": "video-content-strategist@claude-code-skills",
+      "name": "video-content-strategist",
+      "market": "claude-code-skills",
+      "repo": "alirezarezvani/claude-skills",
+      "desc": "Use when planning video content strategy, writing video scripts, optimizing YouTube channels, building short-form video pipelines (Reels, TikTok, Shorts), or repurposing long-form content into video. "
+    },
+    {
+      "id": "compliance-team-eu-ai-act@claude-code-skills",
+      "name": "compliance-team-eu-ai-act",
+      "market": "claude-code-skills",
+      "repo": "alirezarezvani/claude-skills",
+      "desc": "EU AI Act (Regulation (EU) 2024/1689) operational compliance specialist for compliance teams. Three deterministic tools: AI system risk classifier (Article 5 prohibited / Article 6 + Annex III high-risk / Article 50 limited-risk / minimal-r"
+    },
+    {
+      "id": "compliance-team-iso42001@claude-code-skills",
+      "name": "compliance-team-iso42001",
+      "market": "claude-code-skills",
+      "repo": "alirezarezvani/claude-skills",
+      "desc": "ISO/IEC 42001:2023 AI Management System (AIMS) specialist for compliance teams: AIMS gap analyzer (Clauses 4-10 coverage scoring + remediation priority), AI risk register builder (Annex A 38 controls + risk-to-treatment map per ISO 23894), "
+    },
+    {
+      "id": "collab-proof@claude-code-skills",
+      "name": "collab-proof",
+      "market": "claude-code-skills",
+      "repo": "alirezarezvani/claude-skills",
+      "desc": "Assisted retrospective: after a session, calibrates what Claude contributed vs what the developer drove. LLM-assessed 4-frame analysis, zero dependencies."
+    },
+    {
+      "id": "hyperframes@hyperframes",
+      "name": "hyperframes",
+      "market": "hyperframes",
+      "repo": "heygen-com/hyperframes",
+      "desc": "HyperFrames by HeyGen. Write HTML, render video. Compositions, GSAP and runtime adapter animations, captions, voiceovers, audio-reactive visuals, and website-to-video capture for HyperFrames."
+    },
+    {
+      "id": "ponytail@ponytail",
+      "name": "ponytail",
+      "market": "ponytail",
+      "repo": "DietrichGebert/ponytail",
+      "desc": "Lazy senior dev mode. Forces the simplest, shortest solution that actually works: YAGNI, stdlib first, no unrequested abstractions."
+    }
+  ],
+  "manifest": {
+    "npm": [
+      "@claude-flow/cli",
+      "@google/gemini-cli",
+      "@googleworkspace/cli",
+      "agent-browser",
+      "jev-guard",
+      "omniroute",
+      "opencode-ai",
+      "pnpm",
+      "rea-agents",
+      "repomix",
+      "ruflo"
+    ],
+    "pip": [
+      "beautifulsoup4",
+      "brotli",
+      "faster-whisper",
+      "fonttools",
+      "google-generativeai",
+      "graphifyy",
+      "groq",
+      "grpcio-status",
+      "laya",
+      "lxml_html_clean",
+      "opencv-python-headless",
+      "playwright",
+      "pymupdf",
+      "pypdf",
+      "PyPDF2",
+      "pypdfium2",
+      "python-docx",
+      "python-dotenv",
+      "scipy",
+      "streamlit",
+      "trafilatura",
+      "validators",
+      "yt-dlp"
+    ],
+    "uv": [
+      "graphifyy"
+    ],
+    "wingetExtra": [
+      "Google.Chrome",
+      "Anysphere.Cursor",
+      "Gyan.FFmpeg.Essentials",
+      "astral-sh.uv",
+      "OBSProject.OBSStudio",
+      "Discord.Discord",
+      "Google.Antigravity",
+      "OpenAI.Codex"
+    ],
+    "manualApps": [
+      "October (desktop)",
+      "Hermes (Nous Research)",
+      "DaVinci Resolve",
+      "Codex desktop app"
+    ],
+    "marketplaces": [
+      {
+        "name": "claude-plugins-official",
+        "source": "anthropics/claude-plugins-official"
+      },
+      {
+        "name": "caveman",
+        "source": "JuliusBrussee/caveman"
+      },
+      {
+        "name": "superpowers-dev",
+        "source": "obra/superpowers"
+      },
+      {
+        "name": "openai-codex",
+        "source": "openai/codex-plugin-cc"
+      },
+      {
+        "name": "claude-for-financial-services",
+        "source": "anthropics/financial-services"
+      },
+      {
+        "name": "claude-for-legal",
+        "source": "anthropics/claude-for-legal"
+      },
+      {
+        "name": "claude-code-skills",
+        "source": "alirezarezvani/claude-skills"
+      },
+      {
+        "name": "marketingskills",
+        "source": "coreyhaines31/marketingskills"
+      },
+      {
+        "name": "social-media-skills",
+        "source": "charlie947/social-media-skills"
+      },
+      {
+        "name": "anthropic-agent-skills",
+        "source": "anthropics/skills"
+      },
+      {
+        "name": "agricidaniel-claude-seo",
+        "source": "AgriciDaniel/claude-seo"
+      },
+      {
+        "name": "repomix",
+        "source": "yamadashy/repomix"
+      },
+      {
+        "name": "hyperframes",
+        "source": "heygen-com/hyperframes"
+      },
+      {
+        "name": "ponytail",
+        "source": "DietrichGebert/ponytail"
+      }
+    ],
+    "mcp": {
+      "playwright": {
+        "type": "stdio",
+        "command": "npx",
+        "args": [
+          "-y",
+          "@playwright/mcp@latest"
+        ],
+        "env": {},
+        "headers": {}
+      },
+      "21st": {
+        "type": "http",
+        "url": "https://21st.dev/api/mcp",
+        "headers": {
+          "x-api-key": "${MCP_21ST_X_API_KEY}"
+        },
+        "env": {}
+      },
+      "figma": {
+        "type": "http",
+        "url": "https://mcp.figma.com/mcp",
+        "env": {},
+        "headers": {}
+      },
+      "laya": {
+        "type": "stdio",
+        "command": "%HOME%/.laya/venv/Scripts/python.exe",
+        "args": [
+          "%HOME%/.laya/laya_mcp.py"
+        ],
+        "env": {},
+        "headers": {}
+      },
+      "rea": {
+        "command": "C:\\Program Files\\nodejs\\node.exe",
+        "args": [
+          "%HOME%\\AppData\\Roaming\\npm\\node_modules\\rea-agents\\scripts\\rea.mjs",
+          "mcp"
+        ],
+        "env": {},
+        "headers": {}
+      }
+    }
+  }
+}

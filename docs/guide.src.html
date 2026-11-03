@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Workspace Migration Guide</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,400;7..72,600&family=Archivo:wght@500;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fbfbfa;--paper:#ffffff;--ink:#16181d;--soft:#4a4f5a;--line:#dfe1e6;--accent:#1747c9;--code:#f1f2f5;--ok:#11734b;--warn:#9a5b00;--mark:#e8eefc}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#111317;--paper:#181b20;--ink:#eceef2;--soft:#a9afbb;--line:#2b3038;--accent:#7ea2ff;--code:#21252c;--ok:#5fd19b;--warn:#f0b65a;--mark:#1f2a44}}
+:root[data-theme="dark"]{--bg:#111317;--paper:#181b20;--ink:#eceef2;--soft:#a9afbb;--line:#2b3038;--accent:#7ea2ff;--code:#21252c;--ok:#5fd19b;--warn:#f0b65a;--mark:#1f2a44}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 Literata,Georgia,serif}
+main{max-width:860px;margin:0 auto;padding:48px 16px 96px}
+h1,h2,h3{font-family:Archivo,system-ui,sans-serif;line-height:1.2;letter-spacing:-.01em}
+h1{font-size:40px;font-weight:800;margin:0 0 12px}
+@media (max-width:600px){h1{font-size:30px}body{font-size:16px}}
+h2{font-size:26px;font-weight:700;margin:56px 0 12px;padding-top:12px;border-top:2px solid var(--ink)}
+h3{font-size:19px;font-weight:700;margin:32px 0 8px}
+p,li{color:var(--ink)}
+.byline{color:var(--soft);font-size:15px;margin:0 0 28px}
+.abstract{background:var(--paper);border:1px solid var(--line);padding:20px 22px;margin:0 0 8px}
+.abstract strong{font-family:Archivo,system-ui,sans-serif}
+a{color:var(--accent)}
+code,pre,kbd{font-family:"JetBrains Mono",ui-monospace,monospace;font-size:.86em}
+code{background:var(--code);padding:.1em .35em;border-radius:3px;word-break:break-word}
+pre{background:var(--code);padding:14px 16px;overflow-x:auto;border-left:3px solid var(--accent);line-height:1.5;margin:12px 0 18px}
+pre code{background:none;padding:0}
+figure{margin:28px 0;background:var(--paper);border:1px solid var(--line);padding:16px}
+figcaption{font-size:14px;color:var(--soft);margin-top:10px}
+table{width:100%;border-collapse:collapse;font-size:14.5px;margin:12px 0 20px;background:var(--paper)}
+th,td{text-align:left;vertical-align:top;padding:8px 10px;border-bottom:1px solid var(--line)}
+th{font-family:Archivo,system-ui,sans-serif;font-weight:700;border-bottom:2px solid var(--ink)}
+.wrap{overflow-x:auto}
+.note{border-left:3px solid var(--warn);padding:6px 14px;margin:16px 0;background:var(--paper)}
+.toc{columns:2;column-gap:32px;font-size:15px;padding-left:20px}
+@media (max-width:600px){.toc{columns:1}}
+.v{color:var(--ok);font-weight:600}.l{color:var(--warn);font-weight:600}.s{color:var(--soft)}
+#q{width:100%;font:16px "JetBrains Mono",monospace;padding:10px 12px;border:1px solid var(--line);background:var(--paper);color:var(--ink);margin:8px 0}
+.cat td:first-child{font-family:"JetBrains Mono",monospace;font-size:13px;white-space:nowrap}
+.cat td.cmd code{font-size:12px}
+.count{color:var(--soft);font-size:14px}
+svg text{font-family:Archivo,system-ui,sans-serif}
+@media (max-width:600px){
+ .cat thead{display:none}
+ .cat tr{display:block;padding:10px 0;border-bottom:1px solid var(--line)}
+ .cat td{display:block;border:0;padding:3px 10px}
+ .cat td:first-child{font-weight:600;white-space:normal}
+ body .themebtn{position:static;display:block;margin:12px 16px 0 auto}
+}
+.themebtn{position:fixed;top:12px;right:12px;font:13px Archivo,sans-serif;background:var(--paper);color:var(--ink);border:1px solid var(--line);padding:6px 10px;cursor:pointer}
+</style>
+</head>
+<body>
+<button class="themebtn" id="tb" type="button">Dark / light</button>
+<main>
+<h1>Moving your agent workspace to a new PC</h1>
+<p class="byline">Scanned on 3 Nov 2026 from Ashraf's main Windows 11 PC. Written for AKN. Every number on this page comes from the scan. Where a source is a best guess, it is marked <span class="l">likely</span>.</p>
+
+<div class="abstract">
+<p><strong>The short answer.</strong> The workspace lives in two GitHub repos, and you run one PowerShell script on the new PC.</p>
+<p><b>Private: <code>akn-official/agent-config</code>.</b> This is the full backup: 238 skills, 123 plugins from 14 marketplaces, 5 MCP servers, hooks, settings, research papers, memory notes, your own skills, and the lists of tools and apps. Only you use it.</p>
+<p><b>Public: <code>akn-official/agent-workspace-kit</code>.</b> The same setup minus everything personal: no memory, research, client or own skills, and no keys. Anyone can install it with one line (<a href="#s9">section 9</a>).</p>
+<p>The script installs the base tools, gets the repo and puts everything back. Afterwards you only sign in to a few services by hand (<a href="#s4">section 4</a>).</p>
+</div>
+
+<ol class="toc">
+<li><a href="#s1">The three commands</a></li>
+<li><a href="#s2">What is on this PC</a></li>
+<li><a href="#s3">How the migration kit works</a></li>
+<li><a href="#s4">New PC, step by step</a></li>
+<li><a href="#s5">Keeping both PCs in sync</a></li>
+<li><a href="#s6">Installing any skill or plugin by hand</a></li>
+<li><a href="#s7">Full catalog (search)</a></li>
+<li><a href="#s8">Limits and open points</a></li>
+<li><a href="#s9">Sharing it with a friend</a></li>
+</ol>
+
+<h2 id="s1">1. The three commands</h2>
+<p><b>On this PC (old)</b>, take a fresh snapshot and push it. Do this any time you add skills or plugins:</p>
+<pre><code>cd ~/agent-config
+node workspace.js snapshot
+git add -A && git commit -m "workspace snapshot" && git push</code></pre>
+<p><b>On the new PC</b>, open normal PowerShell (not as admin), download <code>bootstrap.ps1</code> from the repo on github.com (the repo is private, so a direct link won't work), and run it:</p>
+<pre><code>Set-ExecutionPolicy -Scope CurrentUser RemoteSigned
+.\bootstrap.ps1</code></pre>
+<p>Then open a new terminal, run <code>claude</code>, type <code>/login</code>, and work through the sign-ins in <a href="#s4">section 4</a>.</p>
+
+<figure>
+<svg viewBox="0 0 800 250" width="100%" role="img" aria-label="Flow: old PC snapshot to private GitHub repo to new PC bootstrap">
+<g fill="none" stroke="currentColor" stroke-width="1.5" style="color:var(--ink)">
+<rect x="10" y="40" width="220" height="170" rx="4"/>
+<rect x="290" y="80" width="220" height="90" rx="4"/>
+<rect x="570" y="40" width="220" height="170" rx="4"/>
+<path d="M230 125 H282" marker-end="url(#a)"/><path d="M510 125 H562" marker-end="url(#a)"/>
+</g>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0 L10 5 L0 10z" fill="var(--accent)"/></marker></defs>
+<g fill="var(--ink)" font-size="15">
+<text x="24" y="66" font-weight="700">Old PC</text>
+<text x="24" y="94" font-size="13" fill="var(--soft)">~/.claude skills, plugins,</text>
+<text x="24" y="112" font-size="13" fill="var(--soft)">settings, hooks, MCP,</text>
+<text x="24" y="130" font-size="13" fill="var(--soft)">research, memory,</text>
+<text x="24" y="148" font-size="13" fill="var(--soft)">npm / pip / uv / winget</text>
+<text x="24" y="190" font-size="13" font-family="JetBrains Mono,monospace" fill="var(--accent)">workspace.js snapshot</text>
+<text x="304" y="112" font-weight="700">agent-config (private)</text>
+<text x="304" y="136" font-size="13" fill="var(--soft)">workspace/ 56 MB, 2,131 files</text>
+<text x="304" y="154" font-size="13" fill="var(--soft)">no keys, no logins</text>
+<text x="584" y="66" font-weight="700">New PC</text>
+<text x="584" y="94" font-size="13" fill="var(--soft)">winget apps, Claude Code,</text>
+<text x="584" y="112" font-size="13" fill="var(--soft)">install.js (ashraf-way),</text>
+<text x="584" y="130" font-size="13" fill="var(--soft)">workspace.js restore,</text>
+<text x="584" y="148" font-size="13" fill="var(--soft)">then sign in by hand</text>
+<text x="584" y="190" font-size="13" font-family="JetBrains Mono,monospace" fill="var(--accent)">bootstrap.ps1</text>
+</g>
+</svg>
+<figcaption>Fig. 1. The snapshot leaves the old PC as files in the private repo. The new PC rebuilds itself from those files.</figcaption>
+</figure>
+
+<h2 id="s2">2. What is on this PC</h2>
+<p>The scan read the real config files, not memory. These are the places that make up your workspace.</p>
+<div class="wrap"><table>
+<tr><th>Part</th><th>Where it lives</th><th>What the scan found</th></tr>
+<tr><td>Claude Code CLI</td><td>native install, <code>~/.claude</code></td><td>v2.1.294, model sonnet, effort high, workflows on, phone push on</td></tr>
+<tr><td>Skills</td><td><code>~/.claude/skills</code></td><td>238 skills. 178 plain folders, 53 made by gstack's setup, 5 git clones (gstack itself is one), 2 linked to agent-config</td></tr>
+<tr><td>Plugins</td><td><code>~/.claude/plugins</code></td><td>123 plugins from 14 marketplaces (table in section 7)</td></tr>
+<tr><td>Hooks</td><td><code>~/.claude/settings.json</code></td><td>ashraf-way SessionStart and SubagentStart hooks (made by install.js). The October app adds about 15 hooks of its own. A few more post to <code>127.0.0.1:4000</code>, a local listener whose app is <span class="l">not identified</span>.</td></tr>
+<tr><td>MCP servers</td><td><code>~/.claude.json</code></td><td>playwright, 21st (API key), figma (sign-in), laya (local Python), rea (npm). October adds its own.</td></tr>
+<tr><td>Global rules</td><td><code>~/.claude/CLAUDE.md</code>, Codex, Gemini, OpenCode files</td><td>Kept in <code>agent-config/global/</code> and restored by install.js</td></tr>
+<tr><td>Research papers</td><td><code>~/.claude/research</code></td><td>8 MB: motion design, AI slop 2026, and others</td></tr>
+<tr><td>Memory</td><td><code>~/.claude/projects/*/memory</code></td><td>21 project memory folders (temp and scratch ones skipped)</td></tr>
+<tr><td>Other agents</td><td><code>.codex .gemini .config/opencode .qwen .kiro .continue .agents</code></td><td>Their skills are all copies of skills in <code>~/.claude/skills</code>, so restore links them back. There are also 4 OpenCode agents (brand-consultant, design-reviewer, meenakshi-maintainer, pixel-maintainer).</td></tr>
+<tr><td>npm globals</td><td>Node 24</td><td id="npm"></td></tr>
+<tr><td>Python</td><td>3.14, user packages</td><td id="pip"></td></tr>
+<tr><td>uv tools</td><td></td><td id="uv"></td></tr>
+<tr><td>Apps (winget)</td><td><code>workspace/winget.json</code></td><td>43 packages, including Git, Node LTS, GitHub CLI, VS Code, Python 3.12 and 3.14, Bun, ripgrep, Poppler, Claude desktop, OpenCode desktop, Windows Terminal and VLC</td></tr>
+<tr><td>Apps (extra)</td><td>checked with <code>winget show</code></td><td id="wx"></td></tr>
+<tr><td>Apps (by hand)</td><td>no winget package</td><td id="man"></td></tr>
+</table></div>
+
+<h2 id="s3">3. How the migration kit works</h2>
+<p>The kit sits in your existing <code>agent-config</code> repo, so there is still only one repo to keep. That repo is <b>private</b> (checked: <code>gh repo view</code> says PRIVATE), and it must stay private. It now holds copies of third-party skills, which are fine to keep for your own use but not to republish.</p>
+<div class="wrap"><table>
+<tr><th>File</th><th>What it does</th></tr>
+<tr><td><code>bootstrap.ps1</code></td><td>For a fresh PC. Installs Git, Node, GitHub CLI, Python, Bun, uv, ripgrep and ffmpeg with winget. Installs Claude Code with the official script. Signs in to GitHub and clones the repo. Imports all your apps. Then runs the two scripts below. Safe to run again.</td></tr>
+<tr><td><code>install.js</code></td><td>Unchanged from before. Links ashraf-way and linkedin-refiner into every agent, writes the global rule files, adds the ashraf-way hook, and installs ponytail and caveman.</td></tr>
+<tr><td><code>workspace.js snapshot</code></td><td>Run on the old PC. Copies skills, research, memory, Claude agents, OpenCode agents and laya into <code>workspace/</code>. Writes <code>manifest.json</code> with the plugins, marketplaces, MCP servers, settings and tool lists. Writes <code>winget.json</code>.</td></tr>
+<tr><td><code>workspace.js restore</code></td><td>Run on the new PC. Installs the npm, pip and uv tools. Copies skills into place and clones the git skills. Runs gstack's setup. Links skills into the other agents. Restores research, memory and settings. Adds the marketplaces, installs the plugins and adds the MCP servers. It never overwrites a folder that already exists. <code>--dry</code> shows what it would do, and <code>--no-tools</code> skips npm, pip and uv.</td></tr>
+</table></div>
+<h3>What is never copied</h3>
+<ul>
+<li>Logins and keys: <code>.credentials.json</code>, <code>auth.json</code>, <code>.env*</code>, <code>*.key</code>/<code>*.pem</code>. MCP keys become placeholders such as <code>${MCP_21ST_X_API_KEY}</code>.</li>
+<li>Build and render output: <code>node_modules</code>, <code>.venv</code>, <code>out</code>, <code>dist</code>, <code>.git</code>, and any file over 20 MB. Your 17 GB of promo-video renders in <code>promo-video-generator/out</code> stay on the old PC. Copy them with OneDrive or a drive if you need them.</li>
+<li>Claude.ai synced skills (<code>skills/synced</code>), which come back when you sign in, and the October app's hooks and MCP, which its own installer writes.</li>
+<li>Your <code>permissions.allow</code> list (72 entries). Almost all of them are tied to old project paths.</li>
+</ul>
+<p>A secret scan of the 2,131 files in the private snapshot found one Google Maps browser key inside a client skill. That skill is never put in the public kit. Nothing else matched (patterns: Anthropic, OpenAI, GitHub, Google, Slack, AWS, private keys). The public kit is scanned again before every push.</p>
+<h3>Private backup vs public kit</h3>
+<div class="wrap"><table>
+<tr><th></th><th>agent-config (private)</th><th>agent-workspace-kit (public)</th></tr>
+<tr><td>Plugins, marketplaces, MCP list, settings</td><td>yes</td><td>yes</td></tr>
+<tr><td>Open-source skills (MIT / Apache-2.0)</td><td>copied</td><td>copied, with each license in <code>THIRD_PARTY/</code></td></tr>
+<tr><td>gstack and other git skills</td><td>cloned from source</td><td>cloned from source</td></tr>
+<tr><td>Skills with no known source or license</td><td>copied</td><td>left out</td></tr>
+<tr><td>Own skills and client skills (7)</td><td>yes</td><td>no</td></tr>
+<tr><td>Memory, research papers, OpenCode client agents</td><td>yes</td><td>no</td></tr>
+<tr><td>Keys and logins</td><td>never</td><td>never</td></tr>
+</table></div>
+<p>The kit is built from the private snapshot with <code>node workspace.js kit &lt;folder&gt;</code>. If the repo it runs in is public, <code>snapshot</code> refuses to run, so memory notes can't land in a public repo by mistake.</p>
+
+<h2 id="s4">4. New PC, step by step</h2>
+<ol>
+<li><b>Windows basics.</b> Sign in to Windows and OneDrive with the same account so <code>Desktop\Projects</code> syncs down. Memory notes are keyed to folder paths, so keep the same folder layout. A different Windows user name is fine.</li>
+<li><b>Get the script.</b> On github.com, open <code>akn-official/agent-config</code>, open <code>bootstrap.ps1</code>, choose "Download raw file", and save it to Downloads.</li>
+<li><b>Run it.</b> Open Start, then PowerShell (the normal 64-bit one, not as admin):
+<pre><code>Set-ExecutionPolicy -Scope CurrentUser RemoteSigned
+cd ~\Downloads
+.\bootstrap.ps1</code></pre>
+A browser window opens once for the GitHub login. Step 4/6 (the app import) is the slow one, 20 to 40 minutes depending on your connection.</li>
+<li><b>Close the window and open a new terminal</b> so PATH refreshes. Then run <code>claude</code> and <code>/login</code>.</li>
+<li><b>Sign in where a key or account is needed</b> (these can't be copied safely):
+<ul>
+<li>21st MCP: set the key, then re-run restore so it adds the server:
+<pre><code>setx MCP_21ST_X_API_KEY "your-21st-key"
+# open a new terminal, then:
+node ~/agent-config/workspace.js restore --no-tools</code></pre></li>
+<li>Figma MCP: in Claude Code run <code>/mcp</code>, pick figma, sign in.</li>
+<li>Codex: <code>codex login</code>. Gemini CLI: run <code>gemini</code> and sign in with Google. OpenCode: <code>opencode auth login</code>.</li>
+<li>GitHub inside agents is already done by <code>gh auth login</code> from the script.</li>
+<li>Vercel, Supabase and other project CLIs: install per project when needed (<code>npx vercel</code>, <code>npx supabase</code>).</li>
+</ul></li>
+<li><b>Apps without a winget package</b>: install October, Hermes, DaVinci Resolve and the Codex desktop app from their own websites. October puts its hooks back on its first run.</li>
+<li><b>Check it worked</b>:
+<pre><code>claude plugin list | find /c "@"        # expect about 123
+dir $HOME\.claude\skills | measure       # expect about 238
+claude mcp list                          # playwright, figma, laya, rea (+21st after the key)
+node ~/agent-config/workspace.js restore --dry   # should show nothing left to do</code></pre>
+Start a Claude Code session: the ASHRAF-WAY, PONYTAIL and caveman banners should appear at the top.</li>
+</ol>
+<div class="note"><b>If something fails</b>, the restore prints <code>FAILED: &lt;command&gt;</code> and the last error line, then carries on. Fix that one item (usually a network hiccup or a missing tool) and run <code>node ~/agent-config/workspace.js restore</code> again. It only does what is still missing.</div>
+
+<h2 id="s5">5. Keeping both PCs in sync</h2>
+<p>Whichever PC gets a new skill or plugin, run the snapshot there and push. On the other PC, pull and restore:</p>
+<pre><code>git -C ~/agent-config pull
+node ~/agent-config/workspace.js restore --no-tools</code></pre>
+<p>Restore only adds what is missing. It never deletes. If you removed a skill on purpose, remove it on the other PC by hand.</p>
+
+<h2 id="s6">6. Installing any skill or plugin by hand</h2>
+<p>Every skill or plugin you have was installed in one of four ways. The catalog in section 7 says which way applies to each one.</p>
+<h3>a. Plugin from a marketplace (Claude Code)</h3>
+<pre><code>claude plugin marketplace add &lt;github-owner/repo&gt;
+claude plugin install &lt;plugin&gt;@&lt;marketplace&gt;
+# inside a session the same thing is /plugin</code></pre>
+<p>A plugin can bring skills, agents, slash commands, hooks and MCP servers together. All 123 of yours came this way.</p>
+<h3>b. Skill through the skills CLI (works for Claude, Codex, Cursor, OpenCode, Gemini and more)</h3>
+<pre><code>npx skills add &lt;owner/repo&gt; --list            # see what a repo offers
+npx skills add &lt;owner/repo&gt; --skill &lt;name&gt; -g  # install one, globally</code></pre>
+<p>This is how find-skills and the HyperFrames video skills arrived (recorded in <code>~/.agents/.skill-lock.json</code>).</p>
+<h3>c. Git clone into the skills folder</h3>
+<pre><code>git clone --depth 1 https://github.com/&lt;owner/repo&gt; ~/.claude/skills/&lt;name&gt;</code></pre>
+<p>Used for gstack (then <code>./setup</code>, which builds its browser tool with Bun and creates the 53 command skills such as /browse, /qa and /ship), humanizer, ai-second-brain, opus-videos and promo-video-generator.</p>
+<h3>d. Copy a folder</h3>
+<p>A skill is just a folder with a <code>SKILL.md</code>. Copying the folder into <code>~/.claude/skills/</code> installs it. The snapshot uses this route for the 178 skills whose exact version you want to keep. Some upstreams have changed since you installed them: taste-skill now ships one merged skill instead of the 11 you use.</p>
+
+<h2 id="s7">7. Full catalog</h2>
+<p>Type to filter by name, family, source or what it does. <span class="v">verified</span> means the source was read from a file on this PC or from the upstream repo. <span class="l">likely</span> means it was matched by name and links inside the skill. <span class="s">snapshot</span> means no source was recorded, so the copy in the repo is the only one.</p>
+<input id="q" type="search" placeholder="filter: seo, video, design, gstack…" aria-label="Filter catalog">
+<h3>Skills <span class="count" id="sc"></span></h3>
+<div class="wrap"><table class="cat"><thead><tr><th>Skill</th><th>What it does</th><th>Family / source</th><th>Install by hand</th></tr></thead><tbody id="sk"></tbody></table></div>
+<h3>Plugins <span class="count" id="pc"></span></h3>
+<div class="wrap"><table class="cat"><thead><tr><th>Plugin</th><th>What it does</th><th>Marketplace repo</th></tr></thead><tbody id="pl"></tbody></table></div>
+<h3>Marketplaces</h3>
+<div class="wrap"><table><thead><tr><th>Name</th><th>Add with</th></tr></thead><tbody id="mk"></tbody></table></div>
+
+<h2 id="s8">8. Limits and open points</h2>
+<ul>
+<li>The kit was tested on this PC (dry run) and in a throwaway user folder (real run). See the report for the numbers. A first run on a truly clean machine is still the final proof.</li>
+<li>gstack's setup needs Git Bash and Bun. Both come with bootstrap. gstack is cloned at today's upstream version, which may be newer than your copy from 25 Jun 2026.</li>
+<li>Plugin versions come from each marketplace's current state, not the versions you have now. Vendored skills are exact copies.</li>
+<li>Sources marked <span class="l">likely</span> (OmniRoute, Ruflo, Claude SEO extras, taste skills) were matched by name and inner links, not by an install record.</li>
+<li>The 127.0.0.1:4000 hooks were left out because the app behind them was not identified.</li>
+</ul>
+
+<h2 id="s9">9. Sharing it with a friend</h2>
+<p>Your friend doesn't need access to your private repo. They use the public kit. On their Windows PC, in normal PowerShell (not as admin):</p>
+<pre><code>Set-ExecutionPolicy -Scope CurrentUser RemoteSigned
+irm https://raw.githubusercontent.com/akn-official/agent-workspace-kit/main/bootstrap.ps1 | iex</code></pre>
+<p>That one line runs the same six steps as in section 4. It skips the personal rules step, and no GitHub login is needed because the kit is public. Afterwards they sign in to Claude Code with their own account and add their own keys (21st, Figma and so on). Nothing of yours is used.</p>
+<p>If they want to keep their own copy and update it later, they can fork the kit. A fork of a public repo is public too, so if they want to snapshot their own memory notes into it, they should make a <b>private</b> copy instead ("Use this template" → Private, or import it as a private repo). <code>snapshot</code> refuses to write into a public repo.</p>
+<p>When you add new skills or plugins and want your friend to get them:</p>
+<pre><code>cd ~/agent-config
+node workspace.js snapshot
+node workspace.js kit ../agent-workspace-kit
+cd ../agent-workspace-kit; git add -A; git commit -m "update kit"; git push</code></pre>
+<p>Your friend re-runs the same one-line command. It only adds what is missing.</p>
+
+<h2>Sources</h2>
+<ul>
+<li>Local files read on 3 Nov 2026: <code>~/.claude/settings.json</code>, <code>~/.claude.json</code>, <code>~/.claude/plugins/known_marketplaces.json</code>, <code>installed_plugins.json</code>, <code>~/.agents/.skill-lock.json</code>, <code>npm ls -g</code>, <code>pip list</code>, <code>uv tool list</code>, <code>winget export</code>.</li>
+<li><a href="https://github.com/garrytan/gstack">garrytan/gstack</a>, <a href="https://github.com/vercel-labs/skills">vercel-labs/skills</a>, <a href="https://vercel.com/docs/agent-resources/skills">Vercel: agent skills</a>, <a href="https://github.com/heygen-com/hyperframes">heygen-com/hyperframes</a>, <a href="https://github.com/Leonxlnx/taste-skill">Leonxlnx/taste-skill</a>, <a href="https://github.com/nextlevelbuilder/ui-ux-pro-max-skill">nextlevelbuilder/ui-ux-pro-max-skill</a>, <a href="https://github.com/pbakaus/impeccable">pbakaus/impeccable</a>, <a href="https://github.com/emilkowalski/skills">emilkowalski/skills</a>.</li>
+<li>Claude Code native installer for Windows (<code>irm https://claude.ai/install.ps1 | iex</code>): <a href="https://claudefa.st/blog/guide/native-installer">claudefa.st guide</a>, <a href="https://www.codeagentswarm.com/en/guides/claude-code-on-windows">codeagentswarm guide</a>.</li>
+</ul>
+</main>
+<script>
+const C=/*CATALOG*/null;
+const esc=s=>String(s||'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const conf=c=>c==='verified'?'<span class="v">verified</span>':c==='likely'?'<span class="l">likely</span>':'<span class="s">snapshot</span>';
+const M=C.manifest;
+document.getElementById('npm').textContent=M.npm.join(', ');
+document.getElementById('pip').textContent=M.pip.join(', ');
+document.getElementById('uv').textContent=M.uv.join(', ')+' (graphify)';
+document.getElementById('wx').textContent=M.wingetExtra.join(', ');
+document.getElementById('man').textContent=M.manualApps.join(', ');
+document.getElementById('mk').innerHTML=M.marketplaces.map(m=>`<tr><td>${esc(m.name)}</td><td><code>claude plugin marketplace add ${esc(m.source)}</code></td></tr>`).join('');
+const skRows=C.skills.map(s=>({t:(s.name+' '+s.family+' '+s.source+' '+s.desc).toLowerCase(),h:`<tr><td>${esc(s.name)}</td><td>${esc(s.desc)}</td><td>${esc(s.family)}<br><span class="s">${esc(s.source)}</span><br>${conf(s.conf)}</td><td class="cmd"><code>${esc(s.install)}</code></td></tr>`}));
+const plRows=C.plugins.map(p=>({t:(p.id+' '+p.repo+' '+p.desc).toLowerCase(),h:`<tr><td>${esc(p.id)}</td><td>${esc(p.desc)}</td><td><code>${esc(p.repo)}</code></td></tr>`}));
+function draw(q){q=(q||'').toLowerCase().trim();
+ const a=skRows.filter(r=>!q||r.t.includes(q)),b=plRows.filter(r=>!q||r.t.includes(q));
+ document.getElementById('sk').innerHTML=a.map(r=>r.h).join('');document.getElementById('pl').innerHTML=b.map(r=>r.h).join('');
+ document.getElementById('sc').textContent=`(${a.length} of ${skRows.length})`;document.getElementById('pc').textContent=`(${b.length} of ${plRows.length})`;}
+document.getElementById('q').addEventListener('input',e=>draw(e.target.value));draw('');
+document.getElementById('tb').addEventListener('click',()=>{const r=document.documentElement,d=r.dataset.theme||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');r.dataset.theme=d==='dark'?'light':'dark';});
+</script>
+</body>
+</html>
